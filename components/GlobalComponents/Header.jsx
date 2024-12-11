@@ -19,7 +19,7 @@ export default function Header() {
 
   const Logo = ({ className }) => (
     <li
-      className={`sm:flex sm:w-full sm:items-center text-white z-20 sm:justify-between md:flex md:w-full md:items-center md:justify-between ${className}`}
+      className={`z-20 text-white sm:flex sm:w-full sm:items-center sm:justify-between md:flex md:w-full md:items-center md:justify-between ${className}`}
     >
       <div className="flex items-center gap-5">
         <Image src="/icones/studient.ico" width={40} height={40} />
@@ -49,10 +49,10 @@ export default function Header() {
 
   return (
     <LazyMotion features={domAnimation}>
-      <header className="flex z-20">
+      <header className="z-20 flex">
         <nav className="w-full bg-black">
           <ul className="sm:text-md md:text-md flex justify-between p-5 text-4xl text-[1.5rem]">
-            <div className="flex w-full flex-row justify-between gap-10 sm:flex-col md:flex-col sm:gap-5 md:gap-5 ">
+            <div className="flex w-full flex-row justify-between gap-10 sm:flex-col sm:gap-5 md:flex-col md:gap-5 ">
               {/* MOBILE / TABLETTE */}
               <Logo className={`hidden sm:flex md:flex`} />
               <m.div
@@ -80,7 +80,7 @@ export default function Header() {
               </m.div>
 
               {/* PC */}
-              <div className="flex w-full items-center z-20 justify-between gap-20 sm:hidden md:hidden">
+              <div className="z-20 flex w-full items-center justify-between gap-20 sm:hidden md:hidden">
                 <div className="flex w-full items-center gap-5">
                   <Logo className={`flex w-auto min-w-[250px] sm:hidden`} />
                   <div className="flex items-center justify-around">
@@ -100,10 +100,10 @@ export default function Header() {
                   </div>
                 </div>
 
-                <div className="flex w-auto min-w-[250px] z-20 justify-end sm:hidden">
+                <div className="z-20 flex w-auto min-w-[250px] justify-end sm:hidden">
                   <Link
                     href="/Updates"
-                    className="text-white duration-200 ease-out sm:pr-4 md:sm:pr-4 hover:-translate-y-2"
+                    className="text-white duration-200 ease-out hover:-translate-y-2 sm:pr-4 md:sm:pr-4"
                   >
                     Mon site web
                   </Link>
