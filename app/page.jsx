@@ -77,7 +77,7 @@ export default function Home() {
           </>
         </HomePageSection>
         
-        <HomePageSection>
+        <HomePageSection isFlexCol={true}>
           <HomePageArticle
             type="paragraphe"
             label="Le Centre Hospitalier"

@@ -43,7 +43,7 @@ export default function HomePageArticle({
       </div>
     </div>
   ) : type === "info" ? (
-    <div className="sm:mx- my-32 w-[1100px] text-center text-white sm:my-32 sm:w-auto sm:flex-col md:mx-16">
+    <div className="my-32 w-[1100px] text-center text-white sm:my-32 sm:w-auto sm:flex-col md:mx-16">
       <div className="font-semibold">
         <h2 className="text-3xl sm:text-3xl md:text-4xl">{label}</h2>
       </div>
@@ -67,9 +67,9 @@ export default function HomePageArticle({
       </div>
     </div>
   ) : type === "intro" ? (
-    <div className="mt-10 h-auto min-w-[500px] max-w-[500px] border-l-4">
-      <div className="w-full md:w-2/3">
-        <div className="m-5 w-auto text-center sm:my-5 sm:mr-10 md:m-10 md:text-start">
+    <div className="mt-10 sm:ml-6 h-auto w-2/3 border-l-4">
+      <div className=" md:w-2/3">
+        <div className="m-5 w-auto text-center sm:my-5 sm:mr-10 md:m-1 md:text-start">
           <p className="text-start text-5xl font-bold leading-tight text-white md:text-7xl">
             {label}
           </p>
