@@ -18,7 +18,7 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      className="absolute inset-0 z-10 pointer-events-auto"
+      className="absolute inset-0 z-10 sm:hidden pointer-events-auto"
       options={{
         background: {
           color: {
@@ -30,7 +30,7 @@ export default function ParticlesBackground() {
           detectsOn: "canvas",
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push",
             },
             onHover: {
@@ -74,7 +74,7 @@ export default function ParticlesBackground() {
             enable: true,
             outMode: "bounce",
             random: true,
-            speed: 7,
+            speed: 3,
             straight: true,
           },
           number: {

@@ -6,36 +6,41 @@ import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackgrou
 
 export default function Home() {
   return (
-    <main className="relative w-auto min-w-[20vw]">
-      <ParticlesBackground/>
-      <div className="relative mx-auto flex w-auto max-w-[1800px] flex-col justify-center">
+    <main className="relative w-auto sm:overflow-hidden">
+      <ParticlesBackground />
+      <div className="relative flex w-auto flex-col justify-center">
         <HomePageSection>
-          <div className="flex flex-col">
-            <HomePageSection>
-              <div className="w-full">
-                <HomePageArticle
-                  type="intro"
-                  label="Stage de Lohan"
-                  description="Ce site présente la PFMP obligatoire du 23 septembre 2024 au 11 octobre 2024 (3 Semaines) réalisée dans le cadre de la formation en BAC PRO SN RISC. 
+          <div className="flex w-full flex-col">
+            <HomePageArticle
+              type="intro"
+              label="Stage de Lohan"
+              description="Ce site présente la PFMP obligatoire du 23 septembre 2024 au 11 octobre 2024 (3 Semaines) réalisée dans le cadre de la formation en BAC PRO SN RISC. 
                   Ce stage a permis de mettre en pratique les compétences techniques et théoriques acquises durant la formation, 
                   en travaillant sur des problématiques concrètes liées à la gestion et la sécurisation des réseaux au sein de l’entreprise."
-                  linkinfos={[
-                    {
-                      label: "Présentation",
-                      href: "/Presentation",
-                      className:
-                        "hover:rotate-3 hover:shadow-[-4px_0_8px_5px_rgba(0,114,255,0.8)]",
-                    },
-                    {
-                      label: "Technique",
-                      href: "/Technique",
-                      className:
-                        "hover:shadow-[4px_0px_8px_5px_rgba(0,114,255,0.8)]",
-                    },
-                  ]}
-                />
-              </div>
-            </HomePageSection>
+              linkinfos={[
+                {
+                  label: "Présentation",
+                  href: "/Presentation",
+                  className:
+                    "hover:rotate-3 hover:shadow-[-4px_0_8px_5px_rgba(0,114,255,0.8)]",
+                },
+                {
+                  label: "Technique",
+                  href: "/Technique",
+                  className:
+                    "hover:shadow-[4px_0px_8px_5px_rgba(0,114,255,0.8)]",
+                },
+              ]}
+            />
+            <HomePageArticle
+              type="paragraphe"
+              label="Cadre du stage"
+              description="Ce stage, réalisé dans le cadre de la formation en Administration Réseau et Systèmes, a permis de mettre en pratique les compétences théoriques acquises. 
+              Cette formation prépare des professionnels capables de gérer et administrer des infrastructures réseau, d’en assurer la sécurité, et de répondre aux besoins techniques des entreprises.
+               Les stagiaires y développent des aptitudes essentielles en connectivité, en protection des données et en résolution des problématiques informatiques, 
+              renforçant ainsi leur expertise dans un domaine clé pour la performance des organisations modernes."
+            />
+            {/* TABLE RIGHT */}
             <HomePageArticle
               type="paragraphe"
               label="Cadre du stage"
@@ -53,18 +58,18 @@ export default function Home() {
                   subject="3 Techniciens Réseaux"
                   subjectDescription="PRÉSENTATION DU SERVICE"
                   description="LypsChill est une plateforme de streaming qui fonctionne de manière
-            similaire à Netflix, permettant aux utilisateurs de regarder un
-            large éventail de films, de séries, de documentaires et d'autres
-            contenus sans interruption publicitaire. Disponible sur divers
-            appareils connectés à Internet, LypsChill se démarque grâce à ses
-            recommandations personnalisées. Ces suggestions sont adaptées aux
-            préférences individuelles des utilisateurs en se basant sur leurs
-            habitudes de visionnage. En outre, la plateforme propose des
-            productions originales de grande qualité, ce qui contribue à
-            renforcer son impact."
+                  similaire à Netflix, permettant aux utilisateurs de regarder un
+                  large éventail de films, de séries, de documentaires et d'autres
+                  contenus sans interruption publicitaire. Disponible sur divers
+                  appareils connectés à Internet, LypsChill se démarque grâce à ses
+                  recommandations personnalisées. Ces suggestions sont adaptées aux
+                  préférences individuelles des utilisateurs en se basant sur leurs
+                  habitudes de visionnage. En outre, la plateforme propose des
+                  productions originales de grande qualité, ce qui contribue à
+                  renforcer son impact."
                 />
                 <Image
-                  className="-rotate-6 transform rounded-3xl z-20 shadow-lg transition-all duration-500 ease-in-out hover:translate-x-5 hover:translate-y-2 hover:rotate-6 hover:scale-110 hover:opacity-90 hover:shadow-2xl hover:shadow-blue-500/40 sm:mx-auto sm:w-auto md:flex md:w-auto md:items-center md:justify-center lg:mx-auto lg:mt-4 lg:w-[500px] lg:translate-x-14 lg:rotate-3 lg:transition lg:duration-200 lg:ease-in-out lg:hover:rotate-12"
+                  className="z-20 -rotate-6 transform rounded-3xl shadow-lg transition-all duration-500 ease-in-out hover:translate-x-5 hover:translate-y-2 hover:rotate-6 hover:scale-110 hover:opacity-90 hover:shadow-2xl hover:shadow-blue-500/40 sm:mx-auto sm:w-auto md:flex md:w-auto md:items-center md:justify-center lg:mx-auto lg:mt-4 lg:w-[500px] lg:translate-x-14 lg:rotate-3 lg:transition lg:duration-200 lg:ease-in-out lg:hover:rotate-12"
                   src={"/img/CHlogo.png"}
                   alt="hotelimg"
                   width={"250"}
@@ -137,16 +142,13 @@ export default function Home() {
         {/* TABLE LEFT */}
         <HomePageSection>
           <>
-            {/* <div className="mr-6 flex w-auto rotate-3 flex-col pl-5 transition duration-500 ease-in-out hover:rotate-12 sm:mr-0 sm:w-auto sm:rotate-0 sm:pl-0 md:mr-0 md:rotate-0 md:pl-0"> */}
             <Image
-              className="rotate-6 transform rounded-3xl z-20 shadow-lg transition-all duration-500 ease-in-out hover:translate-x-[-5px] hover:translate-y-[-2px] hover:rotate-[-6deg] hover:scale-110 hover:opacity-90 hover:shadow-2xl hover:shadow-blue-500/40 sm:mx-auto sm:w-auto md:flex md:w-auto md:items-center md:justify-center lg:mx-auto lg:mt-4 lg:w-[500px] lg:translate-x-14 lg:rotate-3 lg:transition lg:duration-200 lg:ease-in-out lg:hover:rotate-[-12deg]"
+              className="z-20 rotate-6 transform rounded-3xl shadow-lg transition-all duration-500 ease-in-out hover:translate-x-[-5px] hover:translate-y-[-2px] hover:rotate-[-6deg] hover:scale-110 hover:opacity-90 hover:shadow-2xl hover:shadow-blue-500/40 sm:mx-auto sm:w-auto md:flex md:w-auto md:items-center md:justify-center lg:mx-auto lg:mt-4 lg:w-[500px] lg:translate-x-14 lg:rotate-3 lg:transition lg:duration-200 lg:ease-in-out lg:hover:rotate-[-12deg]"
               src={"/img/DepanageLogo.png"}
               alt="hotelimg"
               width={"250"}
               height={"250"}
             />
-            {/* </div> */}
-
             <HomePageTable
               label="Dépannage Informatique"
               subLabel="CHRSO"

@@ -10,21 +10,23 @@ export default function HomePageArticle({
   type,
 }) {
   return type == "paragraphe" ? (
-    <div className="my-10 w-[1100px] text-center sm:mx-8 sm:my-32 md:mx-16">
+    <div className="my-10 w-auto text-center md:mx-16">
       <div className="font-semibold">
-        <h2 className="text-3xl text-white sm:text-3xl md:text-4xl">{label}</h2>
+        <h2 className=" text-3xl text-white sm:text-3xl md:text-4xl">
+          {label}
+        </h2>
       </div>
-      <div className="mx-20 sm:mx-10 md:mx-20">
-        <p className="my-9 text-xl text-white sm:my-9 sm:text-start sm:text-xl md:text-xl">
+      <div className="mx-20 md:mx-20">
+        <p className="text-red my-9 text-xl sm:my-9 sm:text-center sm:text-xl md:text-xl">
           {description}
         </p>
       </div>
     </div>
   ) : type === "card" ? (
-    <div className="flex h-auto flex-row sm:mx-4 sm:flex-col sm:gap-5 md:w-[700px] md:flex-col md:gap-5">
+    <div className="flex h-auto flex-row sm:mx-4 sm:flex-col sm:items-center sm:gap-5 md:w-[700px] md:flex-col md:gap-5">
       <div>
         <Image
-          className="sm:h-[100px] sm:w-[100px] md:h-[150px] md:w-[150px]"
+          className="sm:size-[100px] md:size-[150px]"
           src={imageSource}
           alt="Logo D'image"
           height={700}
@@ -32,8 +34,8 @@ export default function HomePageArticle({
         />
       </div>
       <div className="ml-4">
-        <div className="flex w-auto items-center font-semibold">
-          <p className="text-2xl sm:text-2xl md:text-4xl">{label}</p>
+        <div className="flex w-auto items-center font-semibold sm:justify-center">
+          <p className="text-2xl text-white sm:text-2xl md:text-4xl">{label}</p>
         </div>
         <p className="py-6 text-lg text-white sm:text-lg md:py-6 md:text-xl">
           {description}
@@ -41,12 +43,12 @@ export default function HomePageArticle({
       </div>
     </div>
   ) : type === "info" ? (
-    <div className="my-32 w-[1100px] text-center text-white sm:mx-8 sm:my-32 md:mx-16">
+    <div className="sm:mx- my-32 w-[1100px] text-center text-white sm:my-32 sm:w-auto sm:flex-col md:mx-16">
       <div className="font-semibold">
         <h2 className="text-3xl sm:text-3xl md:text-4xl">{label}</h2>
       </div>
       <div className="mx-20 sm:mx-10 md:mx-20">
-        <p className="my-9 text-xl sm:my-9 sm:text-start sm:text-xl md:text-xl">
+        <p className="my-9 text-xl sm:my-9 sm:text-center sm:text-xl md:text-xl">
           {description}
         </p>
         <div className="mx-10 my-7 flex w-auto flex-row items-center justify-center gap-4 text-center sm:mx-10 sm:my-7 sm:flex-col sm:gap-2">
@@ -56,7 +58,7 @@ export default function HomePageArticle({
               href={info.href}
               className={`${
                 info.className ? info.className : "hover:-rotate-3"
-              } flex h-14 w-[182px] items-center justify-center z-20 rounded-[2rem] border-2 bg-black text-lg duration-200 hover:scale-110 active:scale-100 active:duration-75 sm:mb-3 sm:h-14 sm:w-[182px] sm:rounded-[2rem] sm:text-lg`}
+              } z-20 flex h-14 w-[182px] items-center justify-center rounded-[2rem] border-2 bg-black text-lg duration-200 hover:scale-110 active:scale-100 active:duration-75 sm:mb-3 sm:h-14 sm:w-[182px] sm:rounded-[2rem] sm:text-lg`}
             >
               {info.label}
             </Link>
@@ -86,7 +88,7 @@ export default function HomePageArticle({
               href={info.href}
               className={`${
                 info.className ? info.className : ""
-              } flex h-14 w-[182px] items-center justify-center z-20 rounded-[2rem] border-2 bg-black text-lg duration-200 hover:-rotate-3 hover:scale-110 active:scale-100 active:duration-75 sm:mb-3 sm:h-14 sm:w-[182px] sm:rounded-[2rem] sm:text-lg`}
+              } z-20 flex h-14 w-[182px] items-center justify-center rounded-[2rem] border-2 bg-black text-lg duration-200 hover:-rotate-3 hover:scale-110 active:scale-100 active:duration-75 sm:mb-3 sm:h-14 sm:w-[182px] sm:rounded-[2rem] sm:text-lg`}
             >
               {info.label}
             </Link>
