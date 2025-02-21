@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackground";
-import { WebsiteCard } from "@/components/website/WebsiteCard";
+import { WebsiteCard } from "@/components/Website/WebsiteCard";
 
 export default function Home() {
   return (
