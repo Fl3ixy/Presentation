@@ -3,8 +3,9 @@ import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackgrou
 
 export default function Home() {
   return (
-    <main className="relative w-auto min-w-[20vw]">
-      <ParticlesBackground/>
+    <main className="relative min-w-[20vw]">
+      {/* Particules d'arrière-plan */}
+      <ParticlesBackground />
     </main>
   );
 }

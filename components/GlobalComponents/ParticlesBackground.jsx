@@ -18,7 +18,7 @@ export default function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      className="absolute inset-0 z-10 sm:hidden pointer-events-auto"
+      className="absolute inset-0 -z-10 sm:hidden pointer-events-auto"
       options={{
         background: {
           color: {

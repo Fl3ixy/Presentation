@@ -23,7 +23,7 @@ export default function Header() {
     >
       <div className="flex items-center gap-5">
         <Image src="/icones/studient.ico" width={40} height={40} />
-        <p className={`font-bold uppercase`}>Stage de Lohan</p>
+        <p className={`font-bold uppercase`}>portfolio de Lohan</p>
       </div>
       <button
         onClick={() => setToggleSidebar(!toggleSidebar)}
@@ -102,7 +102,7 @@ export default function Header() {
 
                 <div className="z-20 flex w-auto min-w-[250px] justify-end sm:hidden">
                   <Link
-                    href="/Updates"
+                    href="/website"
                     className="text-white duration-200 ease-out hover:-translate-y-2 sm:pr-4 md:sm:pr-4"
                   >
                     Mon site web

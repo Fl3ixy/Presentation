@@ -1,7 +1,7 @@
 import Image from "next/image";
-import HomePageSection from "../components/HomePage/HomePageSection";
-import HomePageArticle from "../components/HomePage/HomePageArticle";
-import HomePageTable from "../components/HomePage/HomePageTable";
+import HomePageSection from "@/components/HomePage/HomePageSection";
+import HomePageArticle from "@/components/HomePage/HomePageArticle";
+import HomePageTable from "@/components/HomePage/HomePageTable";
 import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackground";
 
 export default function Home() {
@@ -12,10 +12,12 @@ export default function Home() {
         <HomePageSection isFlexCol={true}>
           <HomePageArticle
             type="intro"
-            label="Stage de Lohan"
-            description="Ce site présente la PFMP obligatoire du 23 septembre 2024 au 11 octobre 2024 (3 Semaines) réalisée dans le cadre de la formation en BAC PRO SN RISC. 
-                  Ce stage a permis de mettre en pratique les compétences techniques et théoriques acquises durant la formation, 
-                  en travaillant sur des problématiques concrètes liées à la gestion et la sécurisation des réseaux au sein de l’entreprise."
+            label="Portfolio de Lohan"
+            description="Bonjour,
+            Je m'appelle Lohan Derepper, étudiant au lycée professionnel LYPSO en formation Systèmes Numériques, 
+            option RISC (Réseaux Informatiques et Systèmes Communicants). Cette formation me permet d'explorer les 
+            vastes domaines de l'informatique afin de découvrir ma spécialité, que ce soit dans les réseaux ou le 
+            développement web, en vue de poursuivre un BTS ou une autre formation à venir."
             linkinfos={[
               {
                 label: "Présentation",
@@ -32,20 +34,25 @@ export default function Home() {
           />
           <HomePageArticle
             type="paragraphe"
-            label="Cadre du stage"
-            description="Ce stage, réalisé dans le cadre de la formation en Administration Réseau et Systèmes, a permis de mettre en pratique les compétences théoriques acquises. 
-              Cette formation prépare des professionnels capables de gérer et administrer des infrastructures réseau, d’en assurer la sécurité, et de répondre aux besoins techniques des entreprises.
-               Les stagiaires y développent des aptitudes essentielles en connectivité, en protection des données et en résolution des problématiques informatiques, 
-              renforçant ainsi leur expertise dans un domaine clé pour la performance des organisations modernes."
+            label="Cadre du site"
+            description="La création de ce site web s'inscrit dans le cadre d'une épreuve orale du baccalauréat professionnel. 
+            Le projet a été réalisé en plusieurs étapes : conception du design, développement technique et recherche d'informations 
+            fiables à présenter. Différents langages de programmation, comme [NextJS, TailwindCSS, REACT et JavaScript], ont été utilisés pour rendre
+             le site esthétique, fluide et fonctionnel. L'objectif principal était d'améliorer l'organisation du contenu et de renforcer 
+             l'impact visuel pour une présentation claire et efficace. Ce projet m'a également permis de mettre en pratique et
+              d'approfondir mes compétences en développement web.Vous pouvez découvrir davantage de détails 
+             sur le développement du site web dans l'onglet dédié DEVELOPPEMENT."
           />
           <HomePageArticle
             type="paragraphe"
-            label="Cadre du stage"
-            description="Ce stage, réalisé dans le cadre de la formation en Administration Réseau et Systèmes, a permis de mettre en pratique les compétences théoriques acquises. 
-              Cette formation prépare des professionnels capables de gérer et administrer des infrastructures réseau, d’en assurer la sécurité, et de répondre aux besoins techniques des entreprises.
-              Les stagiaires y développent des aptitudes essentielles en connectivité, en protection des données et en résolution des problématiques informatiques, 
-              renforçant ainsi leur expertise dans un domaine clé pour la performance des organisations modernes."
+            label="Le Stage"
+            description="J'ai réalisé plusieurs stages (4 à 5) au sein du CHRSO (Centre Hospitalier de la Région de Saint-Omer), 
+            qui m'ont permis de développer mes compétences en systèmes informatiques et réseaux. Ces expériences m'ont appris des
+             notions essentielles pour ma formation, telles que le dépannage varié, l'installation de matériel réseau, la 
+             configuration informatique, ainsi que d'autres tâches enrichissantes. Vous pouvez découvrir davantage de détails 
+             sur ces stages dans l'onglet dédié STAGE."
           />
+          
         </HomePageSection>
 
         {/* TABLE RIGHT */}
@@ -56,16 +63,10 @@ export default function Home() {
               subLabel="CHRSO"
               subject="3 Techniciens Réseaux"
               subjectDescription="PRÉSENTATION DU SERVICE"
-              description="LypsChill est une plateforme de streaming qui fonctionne de manière
-                  similaire à Netflix, permettant aux utilisateurs de regarder un
-                  large éventail de films, de séries, de documentaires et d'autres
-                  contenus sans interruption publicitaire. Disponible sur divers
-                  appareils connectés à Internet, LypsChill se démarque grâce à ses
-                  recommandations personnalisées. Ces suggestions sont adaptées aux
-                  préférences individuelles des utilisateurs en se basant sur leurs
-                  habitudes de visionnage. En outre, la plateforme propose des
-                  productions originales de grande qualité, ce qui contribue à
-                  renforcer son impact."
+              description="En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+               -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+                -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+                 -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV"
             />
             <Image
               className="z-20 -rotate-6 transform rounded-3xl shadow-lg transition-all duration-500 ease-in-out hover:translate-x-5 hover:translate-y-2 hover:rotate-6 hover:scale-110 hover:opacity-90 hover:shadow-2xl hover:shadow-blue-500/40 sm:mx-auto sm:w-auto md:flex md:w-auto md:items-center md:justify-center lg:mx-auto lg:mt-4 lg:w-[500px] lg:translate-x-14 lg:rotate-3 lg:transition lg:duration-200 lg:ease-in-out lg:hover:rotate-12"
@@ -76,13 +77,13 @@ export default function Home() {
             />
           </>
         </HomePageSection>
-        
+
         <HomePageSection isFlexCol={true}>
           <HomePageArticle
             type="paragraphe"
             label="Le Centre Hospitalier"
             description="Le Centre Hospitalier de la Région de Saint-Omer (CHRSO) est une institution regroupant 1 504 agents, dont 130 médecins et 975 soignants environ. Réparti en plusieurs pavillons spécialisés, 
-              il propose une large gamme de services médicaux. Mon stage s’est déroulé au sein du service informatique, un élément clé du bon fonctionnement de l’hôpital. Ce service est responsable de la gestion des systèmes d’information, 
+              il propose une large gamme de services médicaux. Mon stage s'est déroulé au sein du service informatique, un élément clé du bon fonctionnement de l'hôpital. Ce service est responsable de la gestion des systèmes d'information, 
               de la maintenance du matériel informatique et de la sécurité des données. 
               Il joue un rôle central dans la coordination entre les différents services et garantit la continuité des soins grâce à des outils numériques performants et sécurisés."
           />
@@ -92,7 +93,7 @@ export default function Home() {
             label="Le Service Informatique"
             description="Le service informatique du Centre Hospitalier de la Région de Saint-Omer (CHRSO) est composé de 10 employés aux rôles spécifiques : 3 sont spécialisés en gestion et résolution des problèmes applicatifs liés aux logiciels médicaux et administratifs, 
               3 se consacrent à la maintenance et à la configuration du matériel informatique, 1 administrateur système assure la stabilité des serveurs et la sécurité des données, 1 administrateur réseaux veille à la connectivité et à la sécurisation des échanges, 
-              tandis que le responsable informatique coordonne l’ensemble des activités et garantit l’alignement des ressources sur les objectifs stratégiques de l’établissement."
+              tandis que le responsable informatique coordonne l'ensemble des activités et garantit l'alignement des ressources sur les objectifs stratégiques de l'établissement."
           />
         </HomePageSection>
 
@@ -154,14 +155,10 @@ export default function Home() {
               subLabel="CHRSO"
               subject="3 Techniciens Réseaux applicatifs"
               subjectDescription="PRÉSENTATION DU SERVICE"
-              description="Le service de dépannage informatique joue un rôle essentiel dans la productivité 
-              et l’efficacité de l’établissement. Les trois techniciens réseaux garantissent des équipements 
-              informatiques fonctionnels et adaptés aux besoins des utilisateurs. Leur mission englobe la 
-              réparation des pannes, qu’elles soient matérielles ou liées à Windows, ainsi que l’installation 
-              et la configuration de nouveaux outils. Grâce à leurs interventions rapides et efficaces, 
-              ils préviennent les interruptions prolongées, assurant une continuité de travail indispensable. 
-              Dans un environnement comme un hôpital, où les systèmes informatiques sont cruciaux pour les soins
-               et la gestion, leur expertise garantit la fiabilité des appareils et contribue directement au bon fonctionnement global."
+              description="En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+               -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+                -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV
+                 -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV -En DEV"
             />
           </>
         </HomePageSection>

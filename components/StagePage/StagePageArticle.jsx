@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HomePageArticle({
+export default function StagePageArticle({
   label,
   description,
   imageSource,
@@ -12,12 +12,12 @@ export default function HomePageArticle({
   return type == "paragraphe" ? (
     <div className="my-10 w-auto text-center md:mx-16">
       <div className="font-semibold">
-        <h2 className="text-3xl text-sky-500 font-semibold sm:text-3xl md:text-4xl">
+        <h2 className=" text-3xl text-white sm:text-3xl md:text-4xl">
           {label}
         </h2>
       </div>
       <div className="mx-20 md:mx-20">
-        <p className="font-sans text-sm text-white my-9 sm:my-9 sm:text-center sm:text-xl md:text-xl">
+        <p className="text-red my-9 text-xl sm:my-9 sm:text-center sm:text-xl md:text-xl">
           {description}
         </p>
       </div>
@@ -70,14 +70,14 @@ export default function HomePageArticle({
     <div className="mt-10 sm:ml-6 h-auto w-2/3 border-l-4">
       <div className=" md:w-2/3">
         <div className="m-5 w-auto text-center sm:my-5 sm:mr-10 md:m-1 md:text-start">
-          <p className="text-start text-sky-500 text-5xl font-bold leading-tight md:text-7xl">
+          <p className="text-start text-5xl font-bold leading-tight text-white md:text-7xl">
             {label}
           </p>
         </div>
       </div>
       <div className="w-full md:w-1/2">
         <div className="mx-5 w-auto text-center md:mx-10 md:text-start">
-          <p className="text-start font-sans text-sm text-white sm:text-start md:w-96 md:text-start md:text-2xl">
+          <p className="text-start text-lg text-white sm:text-start md:w-96 md:text-start md:text-2xl">
             {description}
           </p>
         </div>
@@ -96,39 +96,7 @@ export default function HomePageArticle({
         </div>
       </div>
     </div>
-  ) : 
- type === "intro2" ? (
-  <div className="mt-10 sm:ml-6 h-auto w-2/3 border-r-4">
-    <div className=" md:w-2/3">
-      <div className="m-5 w-auto text-center sm:my-5 sm:mr-10 md:m-1 md:text-start">
-        <p className="text-start text-5xl font-bold leading-tight text-white md:text-7xl">
-          {label}
-        </p>
-      </div>
-    </div>
-    <div className="w-full md:w-1/2">
-      <div className="mx-5 w-auto text-center md:mx-10 md:text-start">
-        <p className="text-start text-lg text-white sm:text-start md:w-96 md:text-start md:text-2xl">
-          {description}
-        </p>
-      </div>
-      <div className="mx-5 my-7 flex w-auto flex-row gap-4 text-start sm:flex-col sm:gap-2 sm:text-start md:mx-10 md:my-7 md:text-start">
-        {linkinfos.map((info, index) => (
-          <Link
-            key={index}
-            href={info.href}
-            className={`${
-              info.className ? info.className : ""
-            } z-20 flex h-14 w-[182px] items-center justify-center rounded-[2rem] border-2 bg-black text-lg duration-200 hover:-rotate-3 hover:scale-110 active:scale-100 active:duration-75 sm:mb-3 sm:h-14 sm:w-[182px] sm:rounded-[2rem] sm:text-lg`}
-          >
-            {info.label}
-          </Link>
-        ))}
-      </div>
-    </div>
-    
-  </div>
-) : (
+  ) : (
     <></>
   );
 }
