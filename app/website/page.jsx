@@ -12,21 +12,21 @@ export default function Home() {
           Présentation de mon site web
         </p>
         <h2 className="mt-2 text-4xl font-semibold text-white">
-          Comment j'ai créé ce site?
+          Comment j&apos;ai créé ce site?
         </h2>
         <h2 className="mt-1 text-3xl font-semibold text-white">
           Voici mon processus de création
         </h2>
         <div className="w-[60%] sm:w-full">
           <p className="mx-[30%] mt-6 font-sans text-sm text-white sm:mx-0">
-            J'ai créé ce site en utilisant des technologies modernes comme
+            J&apos;ai créé ce site en utilisant des technologies modernes comme
             Next.js, React et TailwindCSS. Le design a été pensé et réalisé sur
             Figma pour offrir une interface claire et une navigation fluide.
-            Chaque page a été développée en React, tandis que TailwindCSS m'a
-            permis de rendre le site esthétique et réactif. J'ai aussi optimisé
+            Chaque page a été développée en React, tandis que TailwindCSS m&apos;a
+            permis de rendre le site esthétique et réactif. J&apos;ai aussi optimisé
             la performance pour garantir une bonne expérience, même sur mobile.
-            Ce projet m'a permis de mettre en pratique mes compétences en
-            développement web et d'aller plus loin avec des outils comme Next.js
+            Ce projet m&apos;a permis de mettre en pratique mes compétences en
+            développement web et d&apos;aller plus loin avec des outils comme Next.js
             et React.
           </p>
         </div>
