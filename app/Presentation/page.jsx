@@ -200,6 +200,24 @@ export default function HomePage() {
 
       {/* Particules d'arrière-plan */}
       <ParticlesBackground />
+
+            {/* Définition de l'animation CSS */}
+            <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(30px); /* Déplacement vers le bas */
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0); /* Position finale */
+          }
+        }
+
+        .animate-fadeInUp {
+          animation: fadeInUp 0.75s ease-out;
+        }
+      `}</style>
     </main>
   );
 }
