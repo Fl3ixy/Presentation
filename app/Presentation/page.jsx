@@ -121,7 +121,7 @@ const Hero = memo(() => (
           Technique
         </Link>
         <Link
-          href="/Technique"
+          href="/Conclusion"
           className="border-red mt-2 flex h-14 w-44 items-center justify-center rounded-full border-2 border-white bg-black text-lg text-white duration-200 hover:-translate-y-2 hover:scale-110 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.8)] active:scale-100 active:duration-75"
         >
           Conclusion
