@@ -158,7 +158,7 @@ export default function HomePage() {
       <section className="px-4 py-12 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-2xl font-extrabold sm:text-3xl">
-            Nos Domaines d'Expertise
+            Nos Domaines d&apos;Expertise
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-center text-xs text-gray-400 sm:text-sm">
             Découvrez nos services clés pour accompagner votre transformation
