@@ -57,43 +57,45 @@ Coordonnées de l'établissement :
 ];
 
 // Composant mémorisé pour la carte de service
-const ServiceCard = memo(({ service, isActive, onToggle, index, onClickCard }) => (
-  <div
-    className="relative transform cursor-pointer overflow-hidden rounded-xl border border-gray-700 bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg transition-transform hover:scale-105 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.5)] sm:p-6"
-    onClick={onClickCard} // Ouvre la modale uniquement sur SM et MD
-  >
-    {service.image && (
-      <div className="mx-auto mb-2 h-12 w-12 sm:mb-4 sm:h-16 sm:w-16">
-        <Image
-          src={service.image}
-          alt={service.title}
-          width={64}
-          height={64}
-          className="object-contain"
-        />
-      </div>
-    )}
-
-    <h3 className="text-center text-lg font-semibold sm:text-xl">
-      {service.title}
-    </h3>
-    <p className="mt-1 text-center font-sans text-base leading-relaxed text-gray-300 sm:mt-2 sm:text-sm">
-      {service.description}
-    </p>
-
-    {/* Affichage uniquement sur SM/MD */}
+const ServiceCard = memo(
+  ({ service, isActive, onToggle, index, onClickCard }) => (
     <div
-      className={`overflow-hidden text-xs leading-relaxed text-gray-300 transition-all duration-500 sm:text-sm ${
-        isActive ? "mt-3 max-h-48 opacity-100 sm:mt-4" : "max-h-0 opacity-0"
-      }`}
-      style={{ wordBreak: "break-word", overflowWrap: "break-word" }}
+      className="relative transform cursor-pointer overflow-hidden rounded-xl border border-gray-700 bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg transition-transform hover:scale-105 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.5)] sm:p-6"
+      onClick={onClickCard} // Ouvre la modale uniquement sur SM et MD
     >
-      <div className="rounded-b-xl border-t border-gray-700 bg-sky-700 p-3 font-sans text-sm sm:p-4 whitespace-pre-line">
-        {service.fullText}
+      {service.image && (
+        <div className="mx-auto mb-2 h-12 w-12 sm:mb-4 sm:h-16 sm:w-16">
+          <Image
+            src={service.image}
+            alt={service.title}
+            width={64}
+            height={64}
+            className="object-contain"
+          />
+        </div>
+      )}
+
+      <h3 className="text-center text-lg font-semibold sm:text-xl">
+        {service.title}
+      </h3>
+      <p className="mt-1 text-center font-sans text-base leading-relaxed text-gray-300 sm:mt-2 sm:text-sm">
+        {service.description}
+      </p>
+
+      {/* Affichage uniquement sur SM/MD */}
+      <div
+        className={`overflow-hidden text-xs leading-relaxed text-gray-300 transition-all duration-500 sm:text-sm ${
+          isActive ? "mt-3 max-h-48 opacity-100 sm:mt-4" : "max-h-0 opacity-0"
+        }`}
+        style={{ wordBreak: "break-word", overflowWrap: "break-word" }}
+      >
+        <div className="whitespace-pre-line rounded-b-xl border-t border-gray-700 bg-sky-700 p-3 font-sans text-sm sm:p-4">
+          {service.fullText}
+        </div>
       </div>
     </div>
-  </div>
-));
+  ),
+);
 
 ServiceCard.displayName = "ServiceCard";
 
@@ -158,11 +160,10 @@ export default function HomePage() {
       <section className="px-4 py-12 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-2xl font-extrabold sm:text-3xl">
-            Nos Domaines d&apos;Expertise
+            Présentation du service DSIO
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-center text-xs text-gray-400 sm:text-sm">
-            Découvrez nos services clés pour accompagner votre transformation
-            numérique.
+          Présentation du service DSIO gère l'informatique au sein de l'hopital
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
@@ -182,15 +183,17 @@ export default function HomePage() {
 
       {/* Modale sur tous les formats d'écran */}
       {showModal && (
-        <div className=" hidden sm:flex fixed inset-0 items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="relative bg-white p-6 rounded-xl max-w-lg w-full sm:w-2/3 lg:w-[60%]">
+        <div className=" fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60 sm:flex">
+          <div className="relative w-full max-w-lg rounded-xl bg-white p-6 sm:w-2/3 lg:w-[60%]">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-500"
+              className="absolute right-4 top-4 text-gray-500"
             >
               ×
             </button>
-            <h3 className="text-xl font-semibold">{services[activeIndex].title}</h3>
+            <h3 className="text-xl font-semibold">
+              {services[activeIndex].title}
+            </h3>
             <p className="mt-2 text-sm text-gray-700 sm:text-base lg:text-lg">
               {services[activeIndex].fullText}
             </p>
@@ -201,8 +204,8 @@ export default function HomePage() {
       {/* Particules d'arrière-plan */}
       <ParticlesBackground />
 
-            {/* Définition de l'animation CSS */}
-            <style jsx>{`
+      {/* Définition de l'animation CSS */}
+      <style jsx>{`
         @keyframes fadeInUp {
           0% {
             opacity: 0;
