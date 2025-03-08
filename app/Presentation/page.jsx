@@ -163,7 +163,7 @@ export default function HomePage() {
             Présentation du service DSIO
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-center text-xs text-gray-400 sm:text-sm">
-          Présentation du service DSIO gère l'informatique au sein de l'hopital
+          Présentation du service DSIO gère l&apos;informatique au sein de l&apos;hopital
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
