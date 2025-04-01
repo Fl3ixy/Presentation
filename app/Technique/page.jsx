@@ -138,7 +138,7 @@ const DATA = {
   technologies: [
     {
       icon: (
-        <img
+        <image
           src="/icones/electricite.png"
           alt=""
           className="h-6 w-6 text-white"
@@ -151,7 +151,7 @@ const DATA = {
     },
     {
       icon: (
-        <img src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
+        <image src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
       ),
       name: "Contrôleur Wi-Fi ARUBA",
       description:
@@ -159,7 +159,7 @@ const DATA = {
       level: 100,
     },
     {
-      icon: <img src="/icones/CSV.png" alt="" className="h-6 w-6 text-white" />,
+      icon: <image src="/icones/CSV.png" alt="" className="h-6 w-6 text-white" />,
       name: " Fichier .CSV",
       description:
         "Un fichier CSV est un fichier qui permet de stocker des données sous forme de tableau, ce qui facilite l'importation en masse d'informations, comme les adresses MAC, dans des systèmes comme un contrôleur Wi-Fi.",
@@ -170,7 +170,7 @@ const DATA = {
     categories: [
       {
         icon: (
-          <img src="/icones/phone.png" alt="" className="h-6 w-6 text-white" />
+          <image src="/icones/phone.png" alt="" className="h-6 w-6 text-white" />
         ),
         title: "Activités Semaine1",
         activites: [
@@ -183,7 +183,7 @@ const DATA = {
       },
       {
         icon: (
-          <img
+          <image
             src="/icones/tournevis.png"
             alt=""
             className="h-6 w-6 text-white"
@@ -200,7 +200,7 @@ const DATA = {
       },
       {
         icon: (
-          <img src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
+          <image src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
         ),
         title: "Activités Semaine3",
         activites: [
@@ -338,7 +338,7 @@ export default function App() {
           </div>
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
-              <img
+              <image
                 src={DATA.entreprise.image}
                 alt="Entreprise"
                 className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
@@ -401,7 +401,7 @@ export default function App() {
                 key={index}
                 className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-8"
               >
-                <img
+                <image
                   src={projet.image}
                   alt={projet.title}
                   className="glow-effect mb-6 h-48 w-full rounded-lg object-cover"

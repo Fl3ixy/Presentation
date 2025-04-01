@@ -10,7 +10,7 @@ export function PresentationCard({ title, description, imageSource }) {
       onClick={() => setIsDescriptionVisible(!isDescriptionVisible)}
     >
       <div className="flex items-center justify-center rounded-full bg-blue-500 p-3 sm:h-16 sm:w-16 sm:rounded-lg md:h-20 md:w-20 md:rounded-lg">
-        <img className="h-10 w-10" src={imageSource} alt="logo" />
+        <image className="h-10 w-10" src={imageSource} alt="logo" />
       </div>
       <h1 className="text-lg font-semibold">{title}</h1>
       <p className="text-sm font-light lg:block md:hidden sm:hidden">
