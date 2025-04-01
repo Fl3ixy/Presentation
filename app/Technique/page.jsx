@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Building2,
   Calendar,
@@ -79,7 +80,7 @@ const DATA = {
     nom: "Direction des Systèmes d'Information aux Organisations",
     description:
       "Le service DSIO est responsable de la gestion de l'ensemble du parc informatique de l'hôpital. Au cours de mes semaines de stage au sein de ce service, j'ai acquis de nombreuses compétences et découvert différents aspects de son fonctionnement. À travers ce site web, je vais vous présenter une activité qui m'a particulièrement marqué.",
-    image: "/ImgRapport/CHRSO_Building.png",
+    Image: "/ImgRapport/CHRSO_Building.png",
     stats: {
       employes: "10 Employés",
       ca: "1 accompagnateur d'activités",
@@ -90,7 +91,7 @@ const DATA = {
       title: "Déploiement de bornes Wi-Fi",
       description:
         "Le déploiement de bornes Wi-Fi correspond à l'installation de nouvelles bornes dans un établissement, incluant toutes les étapes nécessaires : la configuration des nouveaux équipements sur le contrôleur, leur enrôlement dans le réseau, leur mise en service, ainsi que l'installation physique des bornes et leur connexion au système existant.",
-      image: "/ImgRapport/BannerWifiPC.png",
+      Image: "/ImgRapport/BannerWifiPC.png",
       technologies: [
         "Création d'un fichier .csv",
         "Enrôlement des bornes avec leurs MAC",
@@ -102,14 +103,14 @@ const DATA = {
       title: "Création d'un fichier .csv",
       description:
         "La création d'un fichier .csv permet d'importer rapidement les autorisations d'accès au contrôleur, en associant chaque adresse MAC à son autorisation (Accepted,Yes), ce qui permet de gagner du temps et d'éviter la saisie manuelle pour chaque appareil.",
-      image: "/ImgRapport/BannerCSV.png",
+      Image: "/ImgRapport/BannerCSV.png",
       technologies: ["Excel", "Aruba Panel Controler"],
     },
     {
       title: "Enrôlement des bornes ",
       description:
         "L'enrôlement d'une borne Wi-Fi permet de l'intégrer au réseau en l'authentifiant, en lui attribuant les configurations nécessaires et en la synchronisant avec le contrôleur pour garantir une gestion centralisée et une performance complète.",
-      image: "/ImgRapport/BannerArubaCSV.png",
+      Image: "/ImgRapport/BannerArubaCSV.png",
       technologies: [
         "Aruba Panel Controler",
         "Branchement des bornes au réseaux",
@@ -121,14 +122,14 @@ const DATA = {
       title: "Mise en service",
       description:
         "Grâce à la technologie PoE, les électriciens peuvent facilement remplacer les anciennes bornes par les nouvelles en débranchant et rebranchant simplement un seul câble Ethernet, qui transmet à la fois l'alimentation et les données.",
-      image: "/ImgRapport/BannerService.png",
+      Image: "/ImgRapport/BannerService.png",
       technologies: ["Branchage des bornes en PoE par les electriciens"],
     },
     {
       title: "Intégration au réseaux",
       description:
         "Lors du remplacement des bornes, l'administrateur réseau et moi déconnectons le câble du port du switch où l'ancienne borne était branchée, puis nous le reconnectons sur le même port d'un switch Aruba pour intégrer les nouvelles bornes au réseau.",
-      image: "/ImgRapport/BannerArubaCisco.png",
+      Image: "/ImgRapport/BannerArubaCisco.png",
       technologies: [
         "Brassage d'un switch vers un autre",
         "Chaque switch dans la bai a son organisation",
@@ -337,8 +338,7 @@ export default function App() {
             <h2 className="text-3xl font-bold">Le DSIO</h2>
           </div>
           <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
-              <image
+              <Image
                 src={DATA.entreprise.image}
                 alt="Entreprise"
                 className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
@@ -360,7 +360,6 @@ export default function App() {
                   }
                 }
               `}</style>
-            </div>
 
             <div>
               <h3 className="mb-4 text-2xl font-semibold text-sky-500">
@@ -401,7 +400,7 @@ export default function App() {
                 key={index}
                 className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-8"
               >
-                <image
+                <Image
                   src={projet.image}
                   alt={projet.title}
                   className="glow-effect mb-6 h-48 w-full rounded-lg object-cover"
@@ -551,7 +550,7 @@ export default function App() {
           {/* Planning type */}
           <div className="custom-shadow mb-12 rounded-xl border border-sky-500/20 bg-black/50 p-6">
             <h3 className="mb-6 text-center text-2xl font-semibold text-sky-500">
-              Planning Type d'une Journée
+              Planning Type d&apos;une Journée
             </h3>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
               {DATA.activitesQuotidiennes.planning.map((plage, index) => (
