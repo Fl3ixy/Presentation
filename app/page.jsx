@@ -29,7 +29,7 @@ export default function Home() {
                 label: "Technique",
                 href: "/Technique",
                 className: "hover:shadow-[4px_0px_8px_5px_rgba(0,114,255,0.8)]",
-              },
+              }
             ]}
           />
           <HomePageArticle
@@ -40,7 +40,7 @@ export default function Home() {
             fiables à présenter. Différents langages de programmation, comme [NextJS, TailwindCSS, REACT et JavaScript], ont été utilisés pour rendre
              le site esthétique, fluide et fonctionnel. L'objectif principal était d'améliorer l'organisation du contenu et de renforcer 
              l'impact visuel pour une présentation claire et efficace. Ce projet m'a également permis de mettre en pratique et
-              d'approfondir mes compétences en développement web.Vous pouvez découvrir davantage de détails 
+              d'approfondir mes compétences en développement web. Vous pouvez découvrir davantage de détails 
              sur le développement du site web dans l'onglet dédié DEVELOPPEMENT."
           />
           <HomePageArticle
