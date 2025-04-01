@@ -80,7 +80,7 @@ const DATA = {
     nom: "Direction des Systèmes d'Information aux Organisations",
     description:
       "Le service DSIO est responsable de la gestion de l'ensemble du parc informatique de l'hôpital. Au cours de mes semaines de stage au sein de ce service, j'ai acquis de nombreuses compétences et découvert différents aspects de son fonctionnement. À travers ce site web, je vais vous présenter une activité qui m'a particulièrement marqué.",
-    Image: "/ImgRapport/CHRSO_Building.png",
+    image: "/ImgRapport/CHRSO_Building.png",
     stats: {
       employes: "10 Employés",
       ca: "1 accompagnateur d'activités",
@@ -91,7 +91,7 @@ const DATA = {
       title: "Déploiement de bornes Wi-Fi",
       description:
         "Le déploiement de bornes Wi-Fi correspond à l'installation de nouvelles bornes dans un établissement, incluant toutes les étapes nécessaires : la configuration des nouveaux équipements sur le contrôleur, leur enrôlement dans le réseau, leur mise en service, ainsi que l'installation physique des bornes et leur connexion au système existant.",
-      Image: "/ImgRapport/BannerWifiPC.png",
+      image: "/ImgRapport/BannerWifiPC.png",
       technologies: [
         "Création d'un fichier .csv",
         "Enrôlement des bornes avec leurs MAC",
@@ -103,14 +103,14 @@ const DATA = {
       title: "Création d'un fichier .csv",
       description:
         "La création d'un fichier .csv permet d'importer rapidement les autorisations d'accès au contrôleur, en associant chaque adresse MAC à son autorisation (Accepted,Yes), ce qui permet de gagner du temps et d'éviter la saisie manuelle pour chaque appareil.",
-      Image: "/ImgRapport/BannerCSV.png",
+      image: "/ImgRapport/BannerCSV.png",
       technologies: ["Excel", "Aruba Panel Controler"],
     },
     {
       title: "Enrôlement des bornes ",
       description:
         "L'enrôlement d'une borne Wi-Fi permet de l'intégrer au réseau en l'authentifiant, en lui attribuant les configurations nécessaires et en la synchronisant avec le contrôleur pour garantir une gestion centralisée et une performance complète.",
-      Image: "/ImgRapport/BannerArubaCSV.png",
+      image: "/ImgRapport/BannerArubaCSV.png",
       technologies: [
         "Aruba Panel Controler",
         "Branchement des bornes au réseaux",
@@ -122,14 +122,14 @@ const DATA = {
       title: "Mise en service",
       description:
         "Grâce à la technologie PoE, les électriciens peuvent facilement remplacer les anciennes bornes par les nouvelles en débranchant et rebranchant simplement un seul câble Ethernet, qui transmet à la fois l'alimentation et les données.",
-      Image: "/ImgRapport/BannerService.png",
+      image: "/ImgRapport/BannerService.png",
       technologies: ["Branchage des bornes en PoE par les electriciens"],
     },
     {
       title: "Intégration au réseaux",
       description:
         "Lors du remplacement des bornes, l'administrateur réseau et moi déconnectons le câble du port du switch où l'ancienne borne était branchée, puis nous le reconnectons sur le même port d'un switch Aruba pour intégrer les nouvelles bornes au réseau.",
-      Image: "/ImgRapport/BannerArubaCisco.png",
+      image: "/ImgRapport/BannerArubaCisco.png",
       technologies: [
         "Brassage d'un switch vers un autre",
         "Chaque switch dans la bai a son organisation",
@@ -139,9 +139,11 @@ const DATA = {
   technologies: [
     {
       icon: (
-        <image
+        <Image
           src="/icones/electricite.png"
           alt=""
+          width={6}
+          height={6}
           className="h-6 w-6 text-white"
         />
       ),
@@ -152,7 +154,7 @@ const DATA = {
     },
     {
       icon: (
-        <image src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
+        <Image src="/icones/wifi.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
       ),
       name: "Contrôleur Wi-Fi ARUBA",
       description:
@@ -160,7 +162,7 @@ const DATA = {
       level: 100,
     },
     {
-      icon: <image src="/icones/CSV.png" alt="" className="h-6 w-6 text-white" />,
+      icon: <Image src="/icones/CSV.png" width={6} height={6} alt="" className="h-6 w-6 text-white" />,
       name: " Fichier .CSV",
       description:
         "Un fichier CSV est un fichier qui permet de stocker des données sous forme de tableau, ce qui facilite l'importation en masse d'informations, comme les adresses MAC, dans des systèmes comme un contrôleur Wi-Fi.",
@@ -171,7 +173,7 @@ const DATA = {
     categories: [
       {
         icon: (
-          <image src="/icones/phone.png" alt="" className="h-6 w-6 text-white" />
+          <Image src="/icones/phone.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
         ),
         title: "Activités Semaine1",
         activites: [
@@ -184,9 +186,10 @@ const DATA = {
       },
       {
         icon: (
-          <image
+          <Image
             src="/icones/tournevis.png"
             alt=""
+            width={6} height={6}
             className="h-6 w-6 text-white"
           />
         ),
@@ -201,7 +204,7 @@ const DATA = {
       },
       {
         icon: (
-          <image src="/icones/wifi.png" alt="" className="h-6 w-6 text-white" />
+          <Image src="/icones/wifi.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
         ),
         title: "Activités Semaine3",
         activites: [
@@ -340,6 +343,7 @@ export default function App() {
           <div className="grid items-center gap-12 md:grid-cols-2">
               <Image
                 src={DATA.entreprise.image}
+                width={1500} height={0}
                 alt="Entreprise"
                 className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
                 style={{
@@ -403,6 +407,7 @@ export default function App() {
                 <Image
                   src={projet.image}
                   alt={projet.title}
+                  width={1500} height={0}
                   className="glow-effect mb-6 h-48 w-full rounded-lg object-cover"
                   style={{ filter: "contrast(1.2) brightness(0.8)" }}
                 />
@@ -459,7 +464,7 @@ export default function App() {
       </section>
 
       {/* PARAGRAPHE 3 */}
-      <HomePageSection>
+      <HomePageSection sectionStyles={"bg-black/80"}> 
         <HomePageArticle
           type="info"
           label="Mon avis sur le déploiment"
