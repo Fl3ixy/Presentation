@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative z-20 text-white sm:mx-8 md:mx-16">
-      <div className="mt-8 flex flex-row items-center justify-center gap-5 m:mt-24 sm:flex-row sm:justify-center md:flex-row">
+    <footer className="relative bg-transparent sm:bg-black z-20 text-white">
+      <div className="lg:mt-8 flex flex-row items-center justify-center gap-5 m:mt-24 sm:flex-row sm:justify-center md:flex-row">
         <Link href={"/logins"}>
           <h2 className="text-center text-base duration-100 sm:hidden hover:text-[#d3d3d3fb] sm:text-base md:text-2xl">
             Accueil

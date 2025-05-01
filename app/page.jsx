@@ -25,7 +25,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black/0 via-black/50 to-black/80">
+    <main className="min-h-screen sm:bg-black">
       <ParticlesBackground />
       {/* Hero Section avec animation et design moderne */}
       <section className="relative flex h-auto w-full items-center justify-center overflow-hidden py-24">
@@ -54,19 +54,19 @@ export default function Home() {
           <div className="space-y-10">
             <div className="flex items-center gap-3 text-sm">
               <div className="bg-primary/10 text-primary flex items-center gap-2 rounded-full border px-4 py-2 duration-200 hover:scale-105">
-                <Calendar className="h-4 w-4" />
-                <span>2023 - 2025</span>
+                <Calendar className="h-4 w-4 text-white" />
+                <span className="text-white">2023 - 2025</span>
               </div>
               <div className="bg-primary/50 h-1 w-1 rounded-full" />
               <div className="bg-primary/10 text-primary flex items-center gap-2 rounded-full border px-4 py-2 duration-200 hover:scale-105">
-                <Briefcase className="h-4 w-4" />
-                <span>BAC Système Numérique RISC</span>
+                <Briefcase className="h-4 w-4 text-white" />
+                <span className="text-white">BAC Système Numérique RISC</span>
               </div>
             </div>
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+            <h2 className="text-4xl text-white font-bold leading-tight md:text-5xl">
               Bienvenue sur mon portfolio
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed text-white">
               Découvrez mon expérience de stage au sein du service informatique
               du centre hospitalier de Saint-Omer. Cette immersion
               professionnelle m&apos;a permis de mettre en pratique mes connaissances
@@ -76,16 +76,16 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
               <div className="bg-card/50 border-border/50 flex items-center gap-2 rounded-full border px-4 py-2 backdrop-blur-sm duration-200 hover:scale-105">
-                <Users className="h-4 w-4" />
-                <span>Service informatique</span>
+                <Users className="h-4 w-4 text-white" />
+                <span className="text-white">Service informatique</span>
               </div>
               <div className="bg-card/50 border-border/50 flex items-center gap-2 rounded-full border px-4 py-2 backdrop-blur-sm duration-200 hover:scale-105">
-                <Server className="h-4 w-4" />
-                <span>Infrastructure réseau</span>
+                <Server className="h-4 w-4 text-white" />
+                <span className="text-white">Infrastructure réseau</span>
               </div>
               <div className="bg-card/50 border-border/50 flex items-center gap-2 rounded-full border px-4 py-2 backdrop-blur-sm duration-200 hover:scale-105">
-                <GraduationCap className="h-4 w-4" />
-                <span>Formation TSN</span>
+                <GraduationCap className="h-4 w-4 text-white" />
+                <span className="text-white">Formation TSN</span>
               </div>
             </div>
           </div>
@@ -103,10 +103,10 @@ export default function Home() {
         {/* Sections du site avec design élégant */}
         <section className="space-y-20">
           <div className="mx-auto max-w-3xl space-y-6 text-center">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-4xl text-white font-bold md:text-5xl">
               Explorez Mon Portfolio
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed text-white">
               Naviguez à travers les différentes sections pour découvrir mon
               parcours, les tâches accomplies et mon évolution tout au long de
               cette expérience en milieu hospitalier
@@ -143,10 +143,10 @@ export default function Home() {
                   <div className="from-primary/5 absolute inset-0 rounded-3xl bg-gradient-to-br to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative z-10">
                     {section.icon}
-                    <h3 className="mb-4 text-2xl font-semibold">
+                    <h3 className="mb-4 text-2xl font-semibold text-white">
                       {section.title}
                     </h3>
-                    <p className="text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-muted-foreground mb-8 leading-relaxed text-white">
                       {section.description}
                     </p>
                     <ArrowRight className="absolute bottom-6 right-6 h-5 w-5 transform opacity-0 transition-all duration-300 group-hover:translate-x-2 group-hover:opacity-100" />
@@ -156,7 +156,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <div className="mt-8 grid gap-8 md:grid-cols-2 text-white">
             {[
               {
                 title: "Conclusion",
@@ -197,10 +197,10 @@ export default function Home() {
         {/* Tâches accomplies avec design moderne */}
         <section className="grid items-center gap-20 md:grid-cols-2">
           <div className="space-y-10">
-            <h2 className="text-4xl font-bold md:text-5xl">
+            <h2 className="text-4xl font-bold md:text-5xl text-white">
               Tâches Accomplies
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6 text-white">
               {[
                 "Maintenance et dépannage des postes informatiques du personnel soignant",
                 "Configuration des équipements réseau et téléphonie IP",
@@ -225,7 +225,7 @@ export default function Home() {
         <section className="relative mx-auto max-w-4xl space-y-10 px-4 text-center">
           <div className="from-primary/5 via-primary/2 absolute inset-0 -z-10 rounded-3xl bg-gradient-to-b to-transparent" />
           <h2 className="text-4xl font-bold md:text-5xl">Mon Oral de Bac</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-lg text-white leading-relaxed">
             Ce portfolio rassemble tous les éléments de mon stage en milieu
             hospitalier pour mon oral de bac. Il témoigne de mon implication,
             des compétences acquises et de ma compréhension des enjeux
@@ -236,8 +236,8 @@ export default function Home() {
           <div className="flex justify-center gap-4 pt-8">
             <Link href="/Presentation">
               <div className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 inline-flex items-center gap-2 rounded-full border hover:-translate-y-2 hover:scale-110 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.8)] active:scale-100 active:duration-75 px-6 py-3 backdrop-blur-sm transition-all duration-300">
-                <ArrowRight className="h-5 w-5" />
-                <span className="font-medium ">Commencer la visite</span>
+                <ArrowRight className="h-5 w-5 text-white" />
+                <span className="font-medium text-white">Commencer la visite</span>
               </div>
             </Link>
           </div>

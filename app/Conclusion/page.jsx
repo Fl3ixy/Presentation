@@ -319,7 +319,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>
     </div>
   );
 }
