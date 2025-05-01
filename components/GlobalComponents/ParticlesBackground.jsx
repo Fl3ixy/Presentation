@@ -21,8 +21,8 @@ export default function ParticlesBackground() {
       className="absolute inset-0 -z-10 sm:hidden pointer-events-auto"
       options={{
         background: {
-          color: {
-            value: "#00000",
+          color: { 
+            value: "#000000",
           },
         },
         fpsLimit: 60,

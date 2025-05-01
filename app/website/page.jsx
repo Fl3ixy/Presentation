@@ -2,6 +2,7 @@
 import Image from "next/image";
 import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackground";
 import { WebsiteCard } from "@/components/Website/WebsiteCard";
+import { Link } from "lucide-react";
 
 export default function Home() {
   return (
@@ -30,15 +31,10 @@ export default function Home() {
             et React.
           </p>
         </div>
-        <div className="flex w-full flex-col items-center">
-          <button className="border-red mt-8 flex h-14 w-44 items-center justify-center rounded-full border-2 border-white bg-black text-lg text-white duration-200 hover:-translate-y-2 hover:scale-110 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.8)] active:scale-100 active:duration-75">
-            Technique
-          </button>
-        </div>
       </div>
 
       {/* Section principale */}
-      <section className="flex w-full justify-center py-12 bg-black animate-fadeInUp">
+      <section className="flex w-full justify-center py-12 animate-fadeInUp">
         <article className="container flex flex-col items-start text-start text-white sm:items-center">
           <div className="border-l-2 text-start sm:border-hidden md:border-hidden">
             <p className="whitespace-nowrap pl-4 text-start text-2xl font-semibold text-sky-500 sm:pt-3 sm:text-center sm:text-2xl sm:font-bold md:text-center md:text-2xl md:font-bold">

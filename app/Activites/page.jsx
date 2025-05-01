@@ -97,6 +97,8 @@ const DATA = {
         "Enrôlement des bornes avec leurs MAC",
         "Mise en service",
         "Intégration au réseaux",
+        " HPE Aruba AP-635 RW Campus AP",
+        "cisco aironet 11402",
       ],
     },
     {
@@ -154,7 +156,13 @@ const DATA = {
     },
     {
       icon: (
-        <Image src="/icones/wifi.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
+        <Image
+          src="/icones/wifi.png"
+          alt=""
+          width={6}
+          height={6}
+          className="h-6 w-6 text-white"
+        />
       ),
       name: "Contrôleur Wi-Fi ARUBA",
       description:
@@ -162,7 +170,15 @@ const DATA = {
       level: 100,
     },
     {
-      icon: <Image src="/icones/CSV.png" width={6} height={6} alt="" className="h-6 w-6 text-white" />,
+      icon: (
+        <Image
+          src="/icones/CSV.png"
+          width={6}
+          height={6}
+          alt=""
+          className="h-6 w-6 text-white"
+        />
+      ),
       name: " Fichier .CSV",
       description:
         "Un fichier CSV est un fichier qui permet de stocker des données sous forme de tableau, ce qui facilite l'importation en masse d'informations, comme les adresses MAC, dans des systèmes comme un contrôleur Wi-Fi.",
@@ -170,52 +186,6 @@ const DATA = {
     },
   ],
   activitesQuotidiennes: {
-    categories: [
-      {
-        icon: (
-          <Image src="/icones/phone.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
-        ),
-        title: "Activités Semaine1",
-        activites: [
-          "20 janvier 2025",
-          "21 janvier 2025",
-          "22 janvier 2025",
-          "23 janvier 2025",
-          "24 janvier 2025",
-        ],
-      },
-      {
-        icon: (
-          <Image
-            src="/icones/tournevis.png"
-            alt=""
-            width={6} height={6}
-            className="h-6 w-6 text-white"
-          />
-        ),
-        title: "Activités Semaine2",
-        activites: [
-          "27 janvier 2025",
-          "28 janvier 2025",
-          "29 janvier 2025",
-          "30 janvier 2025",
-          "31 janvier 2025",
-        ],
-      },
-      {
-        icon: (
-          <Image src="/icones/wifi.png" alt="" width={6} height={6} className="h-6 w-6 text-white" />
-        ),
-        title: "Activités Semaine3",
-        activites: [
-          "03 Février 2025",
-          "04 Février 2025",
-          "05 Février 2025",
-          "06 Février 2025",
-          "07 Février 2025",
-        ],
-      },
-    ],
     planning: [
       {
         horaire: "09:00 - 17:00",
@@ -272,26 +242,22 @@ const DATA = {
   ],
   timeline: [
     {
-      title: "Onboarding",
-      date: "Semaine 1-2",
-      description: "Intégration, formation aux outils et processus internes.",
-    },
-    {
-      title: "Montée en compétences",
-      date: "Semaines 3-8",
+      title: "Déploiement de bornes Wi-Fi",
+      date: "PFMP 2 (2025)",
       description:
-        "Participation aux projets et apprentissage du framework interne.",
+        "Le déploiement de bornes Wi-Fi comprend leur installation physique, leur configuration sur le contrôleur, et leur enrôlement dans le réseau. L'utilisation d'un fichier .csv permet d'autoriser rapidement les appareils via leur adresse MAC. L'enrôlement assure que chaque borne est reconnue, configurée et gérée centralement. Grâce au PoE, le remplacement des bornes se fait facilement en rebranchant un seul câble Ethernet. Lors de cette étape, nous reconnectons le câble existant sur un switch Aruba pour intégrer la nouvelle borne au réseau.",
     },
     {
-      title: "Autonomie",
-      date: "Semaines 9-16",
+      title: "Organisation et câblage d'une baie de brassage",
+      date: "PFMP 1 (2025)",
       description:
-        "Prise en charge de user stories complètes et participation aux décisions techniques.",
+        "L'organisation de la baie de brassage commence par un fichier Excel répertoriant tous les ports, switch par switch, avec un code couleur selon le VLAN et le type d'équipement connecté (VoIP, DATA, etc.). La configuration des switchs est ensuite réalisée via un logiciel comme PuTTY ou MRemote. Le câblage suit une logique précise, avec des câbles de couleur différenciée selon le VLAN, pour une meilleure lisibilité. Les connexions entre les switchs et les prises murales (noyaux) sont faites proprement, en respectant la qualité du câble et une organisation claire, assurant performance et maintenance facile.",
     },
     {
-      title: "Expertise",
-      date: "Semaines 17-24",
-      description: "Lead technique sur certaines fonctionnalités et mentorat.",
+      title: "Support Informatique",
+      date: "PFMP 1 (2025)",
+      description:
+        "J'ai assuré le support informatique en répondant aux appels des utilisateurs pour traiter leurs demandes ou résoudre des problèmes. Cela concernait l'installation de logiciels ou de matériel (lorsque la demande était justifiée), ainsi que des pannes, fréquentes (environ 3 appels sur 5). Pour aider efficacement, j'utilisais un outil de prise en main à distance, accessible via l'adresse IP ou le nom de l'ordinateur. J'avais également accès à un serveur contenant les logiciels et copies nécessaires pour l'installation ou la maintenance des postes, notamment ceux utilisés dans les services de soins. La plupart des pannes étaient courantes et j'ai pu les résoudre grâce à mes compétences actuelles en informatique.",
     },
   ],
   conclusion: {
@@ -299,9 +265,9 @@ const DATA = {
       "Les stages réalisés au CHRSO au sein du service informatique DSIO m'ont apporté une expérience très enrichissante, tant sur le plan technique que personnel. J'ai eu l'opportunité de participer à des projets variés, tels que des déploiements, la création de plans et le brassage dans deux baies, ainsi que d'autres tâches très intéressantes.",
     paragraphe2:
       "L'équipe du DSIO a été d'une grande bienveillance, toujours prête à apporter son aide et à expliquer les concepts lorsqu'il était nécessaire. Cela a été extrêmement valorisant, car j'ai pu apprendre beaucoup dans le domaine informatique, tout en développant des relations professionnelles de confiance avec les techniciens du service.",
-      paragraphe3:
+    paragraphe3:
       "Je tiens à remercier chaleureusement toute l'équipe du DSIO pour leur accueil, leur patience et leur soutien tout au long de ce stage. Nous restons actuellement en contact, ce qui me permet de continuer à bénéficier de leurs conseils, notamment pour la préparation d'entretiens et d'autres aspects liés à ma carrière professionnelle.",
-    },
+  },
 };
 
 export default function App() {
@@ -341,29 +307,30 @@ export default function App() {
             <h2 className="text-3xl font-bold">Le DSIO</h2>
           </div>
           <div className="grid items-center gap-12 md:grid-cols-2">
-              <Image
-                src={DATA.entreprise.image}
-                width={1500} height={0}
-                alt="Entreprise"
-                className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
-                style={{
-                  filter: "contrast(1.2) brightness(0.8)",
-                  animation: "bounce 2.5s infinite ease-in-out",
-                }}
-              />
-              <style jsx>{`
-                @keyframes bounce {
-                  0%,
-                  100% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(
-                      -15px
-                    ); /* Moins de mouvement vers le haut */
-                  }
+            <Image
+              src={DATA.entreprise.image}
+              width={1500}
+              height={0}
+              alt="Entreprise"
+              className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
+              style={{
+                filter: "contrast(1.2) brightness(0.8)",
+                animation: "bounce 2.5s infinite ease-in-out",
+              }}
+            />
+            <style jsx>{`
+              @keyframes bounce {
+                0%,
+                100% {
+                  transform: translateY(0);
                 }
-              `}</style>
+                50% {
+                  transform: translateY(
+                    -15px
+                  ); /* Moins de mouvement vers le haut */
+                }
+              }
+            `}</style>
 
             <div>
               <h3 className="mb-4 text-2xl font-semibold text-sky-500">
@@ -407,7 +374,8 @@ export default function App() {
                 <Image
                   src={projet.image}
                   alt={projet.title}
-                  width={1500} height={0}
+                  width={1500}
+                  height={0}
                   className="glow-effect mb-6 h-48 w-full rounded-lg object-cover"
                   style={{ filter: "contrast(1.2) brightness(0.8)" }}
                 />
@@ -462,9 +430,65 @@ export default function App() {
           </div>
         </div>
       </section>
-
+      {/* Activités 2-3 */}
+      <section className="bg-black/80 px-4 py-20 md:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 flex items-center gap-4">
+            <Calendar className="h-8 w-8 text-sky-500" />
+            <h2 className="text-3xl font-bold">Déroulement du Stage</h2>
+          </div>
+          <div className="relative">
+            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-sky-500/20" />
+            <div className="relative mb-12 flex">
+              <div className="flex-1">
+                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
+                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
+                    {DATA.timeline[0].title}
+                  </h3>
+                  <p className="mb-2 text-white">{DATA.timeline[0].date}</p>
+                  <p className="text-white/80">
+                    {DATA.timeline[0].description}
+                  </p>
+                </div>
+              </div>
+              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="flex-1" />
+            </div>
+            <div className="relative mb-12 flex">
+              <div className="flex-1" />
+              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="flex-1">
+                <div className="custom-shadow hover-translate ml-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
+                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
+                    {DATA.timeline[1].title}
+                  </h3>
+                  <p className="mb-2 text-white">{DATA.timeline[1].date}</p>
+                  <p className="text-white/80">
+                    {DATA.timeline[1].description}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="relative mb-12 flex">
+              <div className="flex-1">
+                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
+                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
+                    {DATA.timeline[2].title}
+                  </h3>
+                  <p className="mb-2 text-white">{DATA.timeline[2].date}</p>
+                  <p className="text-white/80">
+                    {DATA.timeline[2].description}
+                  </p>
+                </div>
+              </div>
+              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="flex-1" />
+            </div>
+          </div>
+        </div>
+      </section>
       {/* PARAGRAPHE 3 */}
-      <HomePageSection sectionStyles={"bg-black/80"}> 
+      <HomePageSection sectionStyles={"bg-black/80"}>
         <HomePageArticle
           type="info"
           label="Mon avis sur le déploiment"
@@ -524,34 +548,8 @@ export default function App() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
             <Laptop className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Activités Hebdomadaires</h2>
+            <h2 className="text-3xl font-bold">Planning de stage</h2>
           </div>
-
-          {/* Grille d'activités */}
-          <div className="mb-12 grid gap-8 md:grid-cols-3">
-            {DATA.activitesQuotidiennes.categories.map((categorie, index) => (
-              <div
-                key={index}
-                className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-6"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-sky-500/10">
-                  {categorie.icon}
-                </div>
-                <h3 className="mb-3 text-xl font-semibold text-sky-500">
-                  {categorie.title}
-                </h3>
-                <ul className="space-y-2 text-white/80">
-                  {categorie.activites.map((activite, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-sky-500" />
-                      <span>{activite}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
           {/* Planning type */}
           <div className="custom-shadow mb-12 rounded-xl border border-sky-500/20 bg-black/50 p-6">
             <h3 className="mb-6 text-center text-2xl font-semibold text-sky-500">
@@ -594,79 +592,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* <section className="bg-black/80 px-4 py-20 md:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 flex items-center gap-4">
-            <Calendar className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Déroulement du Stage</h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-sky-500/20" />
-
-            <div className="relative mb-12 flex">
-              <div className="flex-1">
-                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[0].title}
-                  </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[0].date}</p>
-                  <p className="text-white/80">
-                    {DATA.timeline[0].description}
-                  </p>
-                </div>
-              </div>
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
-              <div className="flex-1" />
-            </div>
-            <div className="relative mb-12 flex">
-              <div className="flex-1" />
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
-              <div className="flex-1">
-                <div className="custom-shadow hover-translate ml-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[1].title}
-                  </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[1].date}</p>
-                  <p className="text-white/80">
-                    {DATA.timeline[1].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative mb-12 flex">
-              <div className="flex-1">
-                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[2].title}
-                  </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[2].date}</p>
-                  <p className="text-white/80">
-                    {DATA.timeline[2].description}
-                  </p>
-                </div>
-              </div>
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
-              <div className="flex-1" />
-            </div>
-            <div className="relative mb-12 flex">
-              <div className="flex-1" />
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
-              <div className="flex-1">
-                <div className="custom-shadow hover-translate ml-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[3].title}
-                  </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[3].date}</p>
-                  <p className="text-white/80">
-                    {DATA.timeline[3].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="bg-gradient-to-b from-black/80 via-black/50 to-black/0 px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex items-center gap-4">
@@ -675,7 +600,7 @@ export default function App() {
           </div>
           <div className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-8">
             <p className="mb-6 text-white/80">{DATA.conclusion.paragraphe1}</p>
-            <p className="text-white/80 mb-6">{DATA.conclusion.paragraphe2}</p>            
+            <p className="mb-6 text-white/80">{DATA.conclusion.paragraphe2}</p>
             <p className="text-white/80">{DATA.conclusion.paragraphe3}</p>
           </div>
         </div>

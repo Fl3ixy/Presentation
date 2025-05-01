@@ -10,7 +10,7 @@ const services = [
     title: "Le Stagiaire",
     description: "Expérience enrichissante et confiance acquise",
     fullText:
-      "Je m’appelle Lohan Derepper, j’ai 17 ans et je suis étudiant en Systèmes Numériques option RISC au LYPSO, site de l’Aa. j’ai toujours été curieux de comprendre le fonctionnement des réseaux et des systèmes en milieu professionnel. Stagiaire pour la 5ème fois au service DSIO du CHRSO, un hôpital public, cette expérience m’a permis de renforcer ma relation avec l’équipe informatique, de comprendre les enjeux spécifiques d’un environnement hospitalier et d’acquérir des compétences essentielles en maintenance des systèmes informatique et réseaux.",
+      "Je m'appelle Lohan Derepper, j'ai 17 ans et je suis étudiant en Systèmes Numériques option RISC au LYPSO, site de l'Aa. j'ai toujours été curieux de comprendre le fonctionnement des réseaux et des systèmes en milieu professionnel. Stagiaire pour la 5ème fois au service DSIO du CHRSO, un hôpital public, cette expérience m’a permis de renforcer ma relation avec l’équipe informatique, de comprendre les enjeux spécifiques d’un environnement hospitalier et d’acquérir des compétences essentielles en maintenance des systèmes informatique et réseaux.",
   },
   {
     image: "/img/Computer.svg",
@@ -44,7 +44,7 @@ const services = [
     image: "/img/Loupe.svg",
     title: "Informations pratiques",
     description:
-      "Migration vers le cloud et gestion de vos environnements virtuels.",
+      "Informations sur le service DSIO",
     fullText: `Présentation de l'établissement et du service :
 
 J'ai effectué mon stage au sein du service de l'hôpital public CHRSO, situé à Route de Blendecques, 60357 Helfaut. L'hôpital est dirigé par Christian BURGI. Durant mon stage, j'ai été encadré par Gerald FIERRARD, qui exerçait les fonctions de tuteur ainsi que de responsable du service.
@@ -61,7 +61,7 @@ const ServiceCard = memo(
   ({ service, isActive, onToggle, index, onClickCard }) => (
     <div
       className="relative transform cursor-pointer overflow-hidden rounded-xl border border-gray-700 bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg transition-transform hover:scale-105 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.5)] sm:p-6"
-      onClick={onClickCard} // Ouvre la modale uniquement sur SM et MD
+      onClick={onClickCard}
     >
       {service.image && (
         <div className="mx-auto mb-2 h-12 w-12 sm:mb-4 sm:h-16 sm:w-16">
@@ -117,10 +117,10 @@ const Hero = memo(() => (
       </p>
       <div className="flex flex-row items-center justify-center gap-4">
         <Link
-          href="/Technique"
+          href="/Activites"
           className="border-red mt-2 flex h-14 w-44 items-center justify-center rounded-full border-2 border-white bg-black text-lg text-white duration-200 hover:-translate-y-2 hover:scale-110 hover:shadow-[0_0_8px_5px_rgba(0,114,255,0.8)] active:scale-100 active:duration-75"
         >
-          Technique
+          Activites
         </Link>
         <Link
           href="/Conclusion"

@@ -32,8 +32,9 @@ export default function Footer() {
       </div>
       <div className="flex w-full items-center justify-center">
         <p className="py-3 text-center text-sm font-semibold sm:text-center sm:text-xs md:text-xl">
-          © 2024 - Portfolio Lohan. ALL RIGHTS RESERVED.
+          2024-2025 - Portfolio Lohan - ORAL STAGE - 
         </p>
+        <Link className="text-center text-sm font-semibold sm:text-center sm:text-xs md:text-xl hover:text-[#d3d3d3fb] duration-200" target="blank" href={"https://lypso-saint-omer.62.ac-lille.fr/"}> LYPSO</Link>
       </div>
       <div className="my-6 flex w-auto items-center justify-center duration-200 sm:mb-9">
         <Link href={"/"}>

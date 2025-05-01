@@ -12,9 +12,9 @@ export default function Header() {
   const linkList = [
     { name: "Accueil", link: "/" },
     { name: "Présentation", link: "/Presentation" },
-    { name: "Technique", link: "/Technique" },
-    { name: "Conclusion", link: "/Conclusion" },
+    { name: "Activites", link: "/Activites" },
     { name: "Annexes", link: "/Annexes" },
+    { name: "Conclusion", link: "/Conclusion" },
   ];
 
   const Logo = ({ className }) => (
