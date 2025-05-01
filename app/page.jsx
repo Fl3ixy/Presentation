@@ -69,10 +69,10 @@ export default function Home() {
             <p className="text-muted-foreground text-lg leading-relaxed">
               Découvrez mon expérience de stage au sein du service informatique
               du centre hospitalier de Saint-Omer. Cette immersion
-              professionnelle m'a permis de mettre en pratique mes connaissances
+              professionnelle m&apos;a permis de mettre en pratique mes connaissances
               en réseau et systèmes informatiques dans un environnement
               professionnelle où la fiabilité est essentielle. Ce site présente
-              l'ensemble de mon parcours réalisé en stage pour mon oral de bac.
+              l&apos;ensemble de mon parcours réalisé en stage pour mon oral de bac.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
               <div className="bg-card/50 border-border/50 flex items-center gap-2 rounded-full border px-4 py-2 backdrop-blur-sm duration-200 hover:scale-105">
@@ -132,7 +132,7 @@ export default function Home() {
                 title: "Annexes",
                 icon: <Building className="mb-4 h-8 w-8 text-white" />,
                 description:
-                  "Présentation de l'établissement hospitalier, organigramme du service informatique et ressources complémentaires.",
+                  "Présentation de l&apos;établissement hospitalier, organigramme du service informatique et ressources complémentaires.",
                 link: "/Annexes",
               },
             ].map((section, index) => (
@@ -162,7 +162,7 @@ export default function Home() {
                 title: "Conclusion",
                 icon: <MessageSquare className="mb-4 h-8 w-8 text-white" />,
                 description:
-                  "Bilan de mon stage avec points positifs, axes d'amélioration et lettre de remerciement envers l'équipe du service informatique.",
+                  "Bilan de mon stage avec points positifs, axes d&apos;amélioration et lettre de remerciement envers l&apos;équipe du service informatique.",
                 link: "/Conclusion",
               },
               {
@@ -205,9 +205,9 @@ export default function Home() {
                 "Maintenance et dépannage des postes informatiques du personnel soignant",
                 "Configuration des équipements réseau et téléphonie IP",
                 "Support technique aux utilisateurs (médecins, infirmiers, administration)",
-                "Gestion des droits d'accès et sécurisation des données sensibles",
+                "Gestion des droits d&apos;accès et sécurisation des données sensibles",
                 "Installation et mise à jour des logiciels métiers hospitaliers",
-                "Participation aux projets liés à l'infrastructure informatique",
+                "Participation aux projets liés à l&apos;infrastructure informatique",
               ].map((task, index) => (
                 <div
                   key={index}

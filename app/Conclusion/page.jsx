@@ -152,14 +152,14 @@ export default function Home() {
                     <span className="text-primary font-semibold">
                       expérience enrichissante
                     </span>{" "}
-                    qui m'a permis de développer mes compétences
+                    qui m&apos;a permis de développer mes compétences
                     professionnelles et de mieux comprendre les enjeux du monde
-                    du travail. J'ai pu mettre en pratique mes connaissances
+                    du travail. J&apos;ai pu mettre en pratique mes connaissances
                     théoriques appris au lycée et acquérir de nouvelles
                     compétences techniques grace a ce stage.
                   </p>
                   <p className="leading-relaxed">
-                    Cette expérience m'a également permis de{" "}
+                    Cette expérience m&apos;a également permis de{" "}
                     <span className="text-primary font-semibold">
                       confirmer mon projet professionnel
                     </span>{" "}
@@ -269,22 +269,22 @@ export default function Home() {
                     <span className="text-primary font-semibold">
                       sincère gratitude
                     </span>{" "}
-                    envers toute l'équipe du DSIO du CHRSO pour son accueil
+                    envers toute l&apos;équipe du DSIO du CHRSO pour son accueil
                     chaleureux et son accompagnement tout au long de mes stages.
                   </p>
                   <p className="mb-5 leading-relaxed">
                     Un remerciement particulier à mes maîtres de stage, M.
                     Coopman, M. Defly, M. Maillard et M. Fierrard, pour leur
-                    disponibilité, leurs conseils avisés et la confiance qu'ils
-                    m'ont accordée. Leur soutien m'a permis de progresser et de
-                    m'épanouir pleinement dans mes missions et au cours de mon
+                    disponibilité, leurs conseils avisés et la confiance qu&apos;ils
+                    m&apos;ont accordée. Leur soutien m&apos;a permis de progresser et de
+                    m&apos;épanouir pleinement dans mes missions et au cours de mon
                     stage.
                   </p>
                   <p className="mb-5 leading-relaxed">
                     Cette expérience restera gravée dans ma mémoire comme une
                     étape importante de mon parcours professionnel, et je suis
-                    profondément reconnaissant d'avoir eu l'opportunité de
-                    travailler aux côtés d'une équipe aussi talentueuse que
+                    profondément reconnaissant d&apos;avoir eu l&apos;opportunité de
+                    travailler aux côtés d&apos;une équipe aussi talentueuse que
                     bienveillante.
                   </p>
 
