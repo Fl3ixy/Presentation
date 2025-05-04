@@ -43,8 +43,11 @@ export default function Footer() {
             target="blank" 
             href={"https://lypso-saint-omer.62.ac-lille.fr/"}
           > 
-            {"LYPSO"}
+            {" LYPSO //"}
           </Link>
+          <p className="py-3 text-center text-sm font-mono text-gray-400">
+            {"V2.3"}
+          </p>
         </div>
 
         {/* Button section */}

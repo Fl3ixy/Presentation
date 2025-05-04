@@ -13,6 +13,7 @@ export default function Header() {
     { name: "Accueil", link: "/" },
     { name: "Présentation", link: "/Presentation" },
     { name: "Activites", link: "/Activites" },
+    { name: "Annexes", link: "/Annexes" },
     { name: "Conclusion", link: "/Conclusion" },
   ];
 
@@ -97,15 +98,6 @@ export default function Header() {
                       ),
                     )}
                   </div>
-                </div>
-
-                <div className="z-20 flex w-auto min-w-[250px] justify-end sm:hidden">
-                  <Link
-                    href="/website"
-                    className="text-white font-mono duration-200 ease-out hover:-translate-y-2 sm:pr-4 md:sm:pr-4"
-                  >
-                    Mon site web
-                  </Link>
                 </div>
               </div>
             </div>

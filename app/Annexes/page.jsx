@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <main className="relative min-w-[20vw] text-white bg-black/70 overflow-hidden">
-      {/* Header - Style minimaliste tech */}
+      {/* Header  */}
       <div className="relative z-10 flex flex-col items-center justify-center p-6 text-center">
-        {/* Éléments graphiques de type diagramme technique */}
+        {/* Éléments Technique */}
         <div className="absolute -left-16 top-12 w-12 h-1 bg-white opacity-30"></div>
         <div className="absolute -right-16 bottom-12 w-12 h-1 bg-white opacity-30"></div>
         <div className="absolute left-4 -top-8 w-1 h-8 bg-white opacity-30"></div>
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section principale - Style minimaliste tech */}
+      {/* Section principale */}
       <section className="flex w-full justify-center py-12">
         <article className="container flex flex-col items-start text-start text-white sm:items-center">
           <div className="border-l-2 border-white text-start sm:border-hidden md:border-hidden">
@@ -59,10 +59,10 @@ export default function Home() {
         </article>
       </section>
 
-      {/* Section des cartes - Style minimaliste tech */}
+      {/* Section Cartes */}
       <section className="flex w-full justify-center px-4 p-4">
         <article className="container mx-auto grid w-full grid-cols-4 grid-rows-2 gap-4 bg-black text-center sm:flex sm:grid-cols-1 sm:grid-rows-8 sm:flex-col sm:items-center sm:justify-center sm:gap-6 sm:px-4 md:flex md:grid-cols-2 md:grid-rows-4 md:flex-col md:items-center md:justify-center md:gap-8 md:px-6">
-          {/* Modification du design de WebsiteCard sera appliquée dans le composant */}
+          {/* Modification Composant SiteWeb */}
           <WebsiteCard
             imageSource="/img/CardIconNextJS.svg"
             title="NextJS"
@@ -112,7 +112,7 @@ export default function Home() {
       <div className="fixed bottom-6 left-6 w-6 h-6 border-b border-l border-white opacity-20"></div>
       <div className="fixed bottom-6 right-6 w-6 h-6 border-b border-r border-white opacity-20"></div>
 
-      {/* Particules d'arrière-plan */}
+      {/* Particules Background */}
       <ParticlesBackground />
     </main>
   );

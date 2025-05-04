@@ -354,80 +354,8 @@ export default function App() {
         </div>
       </section>
       
-      {/* Activités 2-3 */}
-      <section className="px-4 py-20 md:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 flex items-center gap-4">
-            <Calendar className="h-8 w-8 text-white" />
-            <h2 className="text-3xl font-bold font-mono">{"// Déroulement du Stage"}</h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-white opacity-20" />
-            <div className="relative mb-12 flex">
-              <div className="flex-1">
-                <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
-                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
-                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
-                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
-                  
-                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
-                    {"[" + DATA.timeline[0].title + "]"}
-                  </h3>
-                  <p className="mb-2 text-white font-mono">{DATA.timeline[0].date}</p>
-                  <p className="text-gray-300 font-mono">
-                    {DATA.timeline[0].description}
-                  </p>
-                </div>
-              </div>
-              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
-              <div className="flex-1" />
-            </div>
-            <div className="relative mb-12 flex">
-              <div className="flex-1" />
-              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
-              <div className="flex-1">
-                <div className="ml-8 border border-white bg-black p-6 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
-                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
-                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
-                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
-                  
-                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
-                    {"[" + DATA.timeline[1].title + "]"}
-                  </h3>
-                  <p className="mb-2 text-white font-mono">{DATA.timeline[1].date}</p>
-                  <p className="text-gray-300 font-mono">
-                    {DATA.timeline[1].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="relative mb-12 flex">
-              <div className="flex-1">
-                <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
-                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
-                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
-                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
-                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
-                  
-                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
-                    {"[" + DATA.timeline[2].title + "]"}
-                  </h3>
-                  <p className="mb-2 text-white font-mono">{DATA.timeline[2].date}</p>
-                  <p className="text-gray-300 font-mono">
-                    {DATA.timeline[2].description}
-                  </p>
-                </div>
-              </div>
-              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
-              <div className="flex-1" />
-            </div>
-          </div>
-        </div>
-      </section>
       
-      {/* PARAGRAPHE 3 */}
+      {/* Avis Déploiment */}
       <HomePageSection sectionStyles={"bg-black/70"}>
         <HomePageArticle
           type="info"
@@ -444,18 +372,18 @@ export default function App() {
               href: "/",
               className:
                 "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
-            },
+              },
             {
               label: "Conclusion",
               href: "/Conclusion",
               className:
                 "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
-            },
+              },
           ]}
         />
       </HomePageSection>
 
-      {/* Apprentissages Section */}
+      {/* Etapes Clés */}
       <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
@@ -481,7 +409,79 @@ export default function App() {
         </div>
       </section>
 
-{/* Continuing from the previous code */}
+              {/* Activités 1-2-3 */}
+              <section className="px-4 py-20 md:px-8">
+                <div className="mx-auto max-w-6xl">
+                  <div className="mb-12 flex items-center gap-4">
+                    <Calendar className="h-8 w-8 text-white" />
+                    <h2 className="text-3xl font-bold font-mono">{"// Déroulement du Stage"}</h2>
+                  </div>
+                  <div className="relative">
+                    <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-white opacity-20" />
+                    <div className="relative mb-12 flex">
+                      <div className="flex-1">
+                        <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
+                          <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                          <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                          
+                          <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                            {"[" + DATA.timeline[0].title + "]"}
+                          </h3>
+                          <p className="mb-2 text-white font-mono">{DATA.timeline[0].date}</p>
+                          <p className="text-gray-300 font-mono">
+                            {DATA.timeline[0].description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
+                      <div className="flex-1" />
+                    </div>
+                    <div className="relative mb-12 flex">
+                      <div className="flex-1" />
+                      <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
+                      <div className="flex-1">
+                        <div className="ml-8 border border-white bg-black p-6 group relative overflow-hidden">
+                          <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                          <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                          
+                          <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                            {"[" + DATA.timeline[1].title + "]"}
+                          </h3>
+                          <p className="mb-2 text-white font-mono">{DATA.timeline[1].date}</p>
+                          <p className="text-gray-300 font-mono">
+                            {DATA.timeline[1].description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative mb-12 flex">
+                      <div className="flex-1">
+                        <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
+                          <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                          <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                          <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                          <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                          
+                          <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                            {"[" + DATA.timeline[2].title + "]"}
+                          </h3>
+                          <p className="mb-2 text-white font-mono">{DATA.timeline[2].date}</p>
+                          <p className="text-gray-300 font-mono">
+                            {DATA.timeline[2].description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
+                      <div className="flex-1" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+{/* Conclusion*/}
 <section className="px-4 py-20 md:px-8">
   <div className="mx-auto max-w-6xl">
     <div className="mb-8 flex items-center gap-4">

@@ -25,7 +25,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Animations pour les sections
+  // Animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,11 +63,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 relative md:p-8">
-      {/* Particules d'arrière-plan */}
+    <div className="min-h-screen bg-black/70 text-white p-4 relative md:p-8">
+      {/* Particules Background */}
       <ParticlesBackground />
 
-      {/* Éléments de design technique dans les coins */}
+      {/* Éléments Techniques */}
       <div className="fixed top-6 left-6 w-6 h-6 border-t border-l border-white opacity-20"></div>
       <div className="fixed top-6 right-6 w-6 h-6 border-t border-r border-white opacity-20"></div>
       <div className="fixed bottom-6 left-6 w-6 h-6 border-b border-l border-white opacity-20"></div>
@@ -80,7 +80,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             className="relative z-10 mx-auto max-w-5xl space-y-16"
           >
-            {/* Header avec révélation par caractère */}
+            {/* Header */}
             <motion.div
               className="py-8 text-center"
               initial={{ opacity: 0 }}
@@ -143,7 +143,7 @@ export default function Home() {
               <ChevronDown className="text-white opacity-70" size={32} />
             </motion.div>
 
-            {/* Main Content as a staggered container */}
+            {/* Main Content */}
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -168,8 +168,8 @@ export default function Home() {
                     qui m&apos;a permis de développer mes compétences
                     professionnelles et de mieux comprendre les enjeux du monde
                     du travail. J&apos;ai pu mettre en pratique mes connaissances
-                    théoriques appris au lycée et acquérir de nouvelles
-                    compétences techniques grace a ce stage.
+                    théoriques apprises au lycée et acquérir de nouvelles
+                    compétences techniques grâce à ce stage.
                   </p>
                   <p className="leading-relaxed">
                     Cette expérience m&apos;a également permis de{" "}
@@ -244,7 +244,7 @@ export default function Home() {
                     animate="visible"
                   >
                     {[
-                      "Prise d'initiative dans certaines situations",
+                      "Prise d'initiatives dans certaines situations",
                       "Approfondissement de certaines connaissances techniques",
                       "Approfondissement d'expériences professionnelles hors du secteur de la santé",
                     ].map((item, index) => (
@@ -267,7 +267,7 @@ export default function Home() {
                 variants={itemVariants}
                 className="relative overflow-hidden rounded-none border border-white bg-black p-8 shadow-lg md:p-10"
               >
-                {/* Éléments graphiques de type diagramme technique */}
+                {/* Éléments Techniques */}
                 <div className="absolute -left-16 top-12 w-12 h-1 bg-white opacity-30"></div>
                 <div className="absolute -right-16 bottom-12 w-12 h-1 bg-white opacity-30"></div>
                 <div className="absolute left-4 -top-8 w-1 h-8 bg-white opacity-30"></div>
@@ -293,7 +293,7 @@ export default function Home() {
                     Un remerciement particulier à mes maîtres de stage, M.
                     Coopman, M. Defly, M. Maillard et M. Fierrard, pour leur
                     disponibilité, leurs conseils avisés et la confiance qu&apos;ils
-                    m&apos;ont accordée. Leur soutien m&apos;a permis de progresser et de
+                    m&apos;ont accordé. Leur soutien m&apos;a permis de progresser et de
                     m&apos;épanouir pleinement dans mes missions et au cours de mon
                     stage.
                   </p>
@@ -335,8 +335,6 @@ export default function Home() {
                 <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
               </motion.section>
             </motion.div>
-            
-            {/* Footer redessiné - version simplifiée */}
           </motion.div>
         )}
       </AnimatePresence>

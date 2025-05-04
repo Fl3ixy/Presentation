@@ -13,9 +13,7 @@ const services = [
     fullText:
       "Je m'appelle Lohan Derepper, j'ai 17 ans et je suis étudiant en Systèmes Numériques option RISC au LYPSO, site de l'Aa. j'ai toujours été curieux de comprendre le fonctionnement des réseaux et des systèmes en milieu professionnel. Stagiaire pour la 5ème fois au service DSIO du CHRSO, un hôpital public, cette expérience m'a permis de renforcer ma relation avec l'équipe informatique, de comprendre les enjeux spécifiques d'un environnement hospitalier et d'acquérir des compétences essentielles en maintenance des systèmes informatique et réseaux.",
     photos: [
-      "/ImgRapport/bai5.jpg",
-      "/img/stagiaire2.jpg",
-      "/img/stagiaire3.jpg"
+      "/ImgRapport/CV.jpg",
     ]
   },
   {
@@ -27,7 +25,10 @@ const services = [
     photos: [
       "/ImgRapport/JacquesDurand.png",
       "/ImgRapport/Aa.png",
-      "/ImgRapport/Reseau.png"
+      "/ImgRapport/bai2.jpg",
+      "/ImgRapport/bai5.jpg",
+      "/ImgRapport/DevoirLypso.png",
+      "/ImgRapport/DevWeb.png",
     ]
   },
   {
@@ -40,6 +41,8 @@ const services = [
       "/ImgRapport/CHRSO_Building.png",
       "/img/CHRSO_Building.png",
       "/ImgRapport/CHRSO2.png",
+      "/ImgRapport/TenueIsolement.jpg",
+      "/ImgRapport/PCName.png",
     ]
   },
   {
@@ -328,10 +331,10 @@ export default function HomePage() {
       <section className="px-4 py-12 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-2xl font-mono font-extrabold sm:text-3xl">
-            {"// Présentation du service DSIO"}
+            {"// Présentation"}
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-center text-xs font-mono text-gray-400 sm:text-sm">
-            {"<service-info>DSIO - Informatique Hospitalière</service-info>"}
+            {"<service-info> Etudes en SN - DSIO - Informatique Hospitalière </service-info>"}
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">

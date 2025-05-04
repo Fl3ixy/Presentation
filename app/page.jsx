@@ -62,7 +62,6 @@ export default function Home() {
   return (
     <main className="min-h-screen text-white bg-black/70">
       <ParticlesBackground />
-      {/* Hero Section avec style minimaliste tech */}
       <section className="relative flex h-auto w-full items-center justify-center overflow-hidden py-24">
         <motion.div 
           className="relative mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-white"
@@ -108,7 +107,7 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-7xl space-y-24 px-4 py-32">
-        {/* Introduction avec style minimaliste tech */}
+        {/* Introduction */}
         <section className="grid items-center gap-20 md:grid-cols-2">
           <div className="space-y-10">
             <div className="flex items-center gap-3 text-sm font-mono">
@@ -130,7 +129,7 @@ export default function Home() {
               du centre hospitalier de Saint-Omer. Cette immersion
               professionnelle m&apos;a permis de mettre en pratique mes connaissances
               en réseau et systèmes informatiques dans un environnement
-              professionnelle où la fiabilité est essentielle. Ce site présente
+              professionnel où la fiabilité est essentielle. Ce site présente
               l&apos;ensemble de mon parcours réalisé en stage pour mon oral de bac.
             </p>
             <div className="flex flex-wrap gap-6 text-sm font-mono">
@@ -148,6 +147,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* IFrame Google Maps */}
           <div className="relative h-[650px] overflow-hidden border border-white shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!4v1746115005943!6m8!1m7!1sBxcRWjQF-9eIAzOh8lWjYw!2m2!1d50.70382527256702!2d2.254077909171113!3f155.05589063449605!4f-0.3006561487309085!5f1.773892411727013"
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sections du site avec style minimaliste tech */}
+        {/* Sections Frames */}
         <section className="space-y-20">
           <div className="mx-auto max-w-3xl space-y-6 text-center">
             <h2 className="text-4xl text-white font-bold md:text-5xl font-mono">
@@ -181,21 +181,21 @@ export default function Home() {
                 title: "Présentation",
                 icon: <FileText className="mb-4 h-8 w-8 text-white" />,
                 description:
-                  "Qui suis-je ? Mon parcours académique, mes objectifs et mes motivations pour ce stage dans le secteur de la santé.",
+                  "Avant de me présenter, je vous propose un aperçu du lieu où j'effectue mon stage dans le secteur de la santé. Ensuite, je reviendrai sur mon parcours académique, mes objectifs et mes motivations.",
                 link: "/Presentation",
               },
               {
                 title: "Activités",
                 icon: <Network className="mb-4 h-8 w-8 text-white" />,
                 description:
-                  "Détail technique des tâches réalisées : maintenance réseau, assistance aux utilisateurs, gestion du parc informatique et sécurité.",
+                  "Détail technique des tâches réalisées : maintenance réseaux, assistance aux utilisateurs, gestion du parc informatique et sécurité.",
                 link: "/Activites",
               },
               {
                 title: "Annexes",
                 icon: <Building className="mb-4 h-8 w-8 text-white" />,
                 description:
-                  "Présentation de l'établissement hospitalier, organigramme du service informatique et ressource. Qui suis-je ? Mon parcours académique, mes objectifs et une présentation du service dans lequel j'ai effectué mon stage dans le secteur de la santé.s complémentaires.",
+                  "Présentation du site web réalisé en NextJS et TailwindCSS. Objectif : créer un site web moderne, rapide et responsive. Projet développé dans le cadre de ma formation en bac pro SN pour mettre en pratique mes compétences en développement web pour l'oral.",
                 link: "/Annexes",
               },
             ].map((section, index) => (
@@ -238,11 +238,11 @@ export default function Home() {
                 link: "/Conclusion",
               },
               {
-                title: "Mon Site Web",
+                title: "Annexes",
                 icon: <Monitor className="mb-4 h-8 w-8 text-white" />,
                 description:
                   "Présentation technique de ce portfolio : conception, développement et choix des technologies pour documenter mon expérience.",
-                link: "/website",
+                link: "/Annexes",
               },
             ].map((section, index) => (
               <Link href={section.link} key={index}>
@@ -275,7 +275,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Tâches accomplies avec style minimaliste tech */}
+        {/* Tâches accomplies */}
         <section className="grid items-center gap-20 md:grid-cols-2">
           <div className="space-y-10">
             <h2 className="text-4xl font-bold md:text-5xl text-white font-mono">
@@ -307,7 +307,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Conclusion avec style minimaliste tech */}
+        {/* Conclusion */}
         <section className="relative mx-auto max-w-4xl space-y-10 px-4 text-center border border-white p-8">
           <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
           <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
@@ -333,7 +333,7 @@ export default function Home() {
         </section>
       </div>
       
-      {/* Éléments de design technique */}
+      {/* Éléments Techniques */}
       <div className="fixed top-6 left-6 w-6 h-6 border-t border-l border-white opacity-20"></div>
       <div className="fixed top-6 right-6 w-6 h-6 border-t border-r border-white opacity-20"></div>
       <div className="fixed bottom-6 left-6 w-6 h-6 border-b border-l border-white opacity-20"></div>
