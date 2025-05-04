@@ -63,15 +63,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-4 relative md:p-8">
-      {/* Particules d'arrière-plan */}
-      <ParticlesBackground />
-
-      {/* Éléments de design technique dans les coins */}
-      <div className="fixed top-6 left-6 w-6 h-6 border-t border-l border-white opacity-20"></div>
-      <div className="fixed top-6 right-6 w-6 h-6 border-t border-r border-white opacity-20"></div>
-      <div className="fixed bottom-6 left-6 w-6 h-6 border-b border-l border-white opacity-20"></div>
-      <div className="fixed bottom-6 right-6 w-6 h-6 border-b border-r border-white opacity-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-black to-black p-4 text-white md:p-8">
+      {/* Particules d'arrière-plan avec opacité réduite */}
+      <div className="opacity-60">
+        <ParticlesBackground />
+      </div>
 
       <AnimatePresence>
         {isLoaded && (
@@ -93,12 +89,12 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="mb-6 inline-block"
               >
-                <div className="mx-auto flex h-20 w-20 items-center justify-center border border-white">
-                <Award size={42} className="text-primary" />
+                <div className="bg-primary/20 mx-auto flex h-20 w-20 items-center justify-center rounded-full">
+                  <Award size={42} className="text-primary" />
                 </div>
               </motion.div>
 
-              <h1 className="text-4xl font-mono font-bold tracking-tight text-white md:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight text-transparent text-white md:text-5xl">
                 {"Conclusion du Stage".split("").map((char, index) => (
                   <motion.span
                     key={index}
@@ -115,17 +111,8 @@ export default function Home() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
-                className="mx-auto mt-6 h-1 w-32 bg-white opacity-50"
+                className="mx-auto mt-6 h-1 w-32 bg-white"
               />
-              
-              <motion.p 
-                className="mt-4 text-sm font-mono tracking-wider text-white opacity-70"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.7 }}
-                transition={{ delay: 1.5 }}
-              >
-                {"//CHRSO:DSIO"}
-              </motion.p>
             </motion.div>
 
             {/* Scroll indicator */}
@@ -140,7 +127,7 @@ export default function Home() {
                 repeatType: "reverse",
               }}
             >
-              <ChevronDown className="text-white opacity-70" size={32} />
+              <ChevronDown className="text-primary" size={32} />
             </motion.div>
 
             {/* Main Content as a staggered container */}
@@ -153,16 +140,16 @@ export default function Home() {
               {/* Main Text Section */}
               <motion.section
                 variants={itemVariants}
-                className="rounded-none border border-white bg-black p-8 shadow-lg transition-all duration-300"
+                className="border-primary/20 hover:border-primary/40 rounded-xl border bg-black/50 p-8 shadow-xl backdrop-blur-sm transition-all duration-300"
               >
-                <h2 className="mb-6 flex items-center text-2xl font-mono font-bold md:text-3xl">
-                  <span className="mr-3">{"// Bilan du Stage"}</span>
-                  <div className="ml-4 h-px flex-grow bg-white opacity-30"></div>
+                <h2 className="text-primary mb-6 flex items-center text-2xl font-bold md:text-3xl">
+                  <span className="mr-3">Bilan du Stage</span>
+                  <div className="from-primary/80 ml-4 h-px flex-grow bg-gradient-to-r to-transparent"></div>
                 </h2>
-                <motion.div className="space-y-6 text-lg font-mono text-gray-300">
+                <motion.div className="space-y-6 text-lg text-gray-300">
                   <p className="leading-relaxed">
                     Ce stage a été une{" "}
-                    <span className="font-semibold text-white">
+                    <span className="text-primary font-semibold">
                       expérience enrichissante
                     </span>{" "}
                     qui m&apos;a permis de développer mes compétences
@@ -173,14 +160,13 @@ export default function Home() {
                   </p>
                   <p className="leading-relaxed">
                     Cette expérience m&apos;a également permis de{" "}
-                    <span className="font-semibold text-white">
+                    <span className="text-primary font-semibold">
                       confirmer mon projet professionnel
                     </span>{" "}
                     et de me projeter dans mon futur métier avec plus de
                     confiance et de motivation.
                   </p>
                 </motion.div>
-                <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
               </motion.section>
 
               {/* Pros and Cons Table */}
@@ -189,19 +175,15 @@ export default function Home() {
                 className="grid gap-8 md:grid-cols-2"
               >
                 <motion.div
-                  whileHover={{ 
-                    scale: 1.03,
-                    boxShadow: "0 0 10px 2px rgba(255,255,255,0.2)",
-                    transition: { duration: 0.3 }
-                  }}
-                  className="rounded-none border-2 border-green-500/20 bg-black p-8 shadow-lg relative"
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="rounded-xl border-2 border-green-500/20 bg-black/50 p-8 shadow-xl backdrop-blur-sm"
                 >
-                  <h3 className="mb-6 flex items-center text-2xl font-mono font-bold text-green-400">
+                  <h3 className="mb-6 flex items-center text-2xl font-bold text-green-400">
                     <CheckCircle size={24} className="mr-3 text-green-400" />
-                    <span>{"[Points Positifs]"}</span>
+                    <span>Points Positifs</span>
                   </h3>
                   <motion.ul
-                    className="space-y-4 font-mono border-green-500/20"
+                    className="space-y-4"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -216,29 +198,25 @@ export default function Home() {
                         key={index}
                         variants={listItemVariants}
                         custom={index}
-                        className="flex items-center space-x-3 border-l-2 border-green-400/30  py-2 pl-2 transition-all duration-300 hover:border-green-400"
+                        className="flex items-center space-x-3 border-l-2 border-green-400/30 py-2 pl-2 transition-all duration-300 hover:border-green-400"
                       >
+                        <span className="h-3 w-3 flex-shrink-0 rounded-full bg-green-400"></span>
                         <span className="text-gray-300">{item}</span>
                       </motion.li>
                     ))}
                   </motion.ul>
-                  <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ 
-                    scale: 1.03,
-                    boxShadow: "0 0 10px 2px rgba(255,255,255,0.2)",
-                    transition: { duration: 0.3 }
-                  }}
-                  className="rounded-none border-2 border-red-500/20 bg-black p-8 shadow-lg relative"
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="rounded-xl border-2 border-red-500/20 bg-black/50 p-8 shadow-xl backdrop-blur-sm"
                 >
-                  <h3 className="mb-6 flex items-center text-2xl font-mono font-bold text-red-400">
+                  <h3 className="mb-6 flex items-center text-2xl font-bold text-red-400">
                     <XCircle size={24} className="mr-3 text-red-400" />
-                    <span>{"[Points à Améliorer]"}</span>
+                    <span>Points à Améliorer</span>
                   </h3>
                   <motion.ul
-                    className="space-y-4 font-mono"
+                    className="space-y-4"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -254,36 +232,41 @@ export default function Home() {
                         custom={index}
                         className="flex items-center space-x-3 border-l-2 border-red-400/30 py-2 pl-2 transition-all duration-300 hover:border-red-400"
                       >
-                      <span className="text-gray-300">{item}</span>
+                        <span className="h-3 w-3 flex-shrink-0 rounded-full bg-red-400"></span>
+                        <span className="text-gray-300">{item}</span>
                       </motion.li>
                     ))}
                   </motion.ul>
-                  <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
                 </motion.div>
               </motion.div>
 
               {/* Thank You Letter */}
               <motion.section
                 variants={itemVariants}
-                className="relative overflow-hidden rounded-none border border-white bg-black p-8 shadow-lg md:p-10"
+                className="border-primary/20 relative overflow-hidden rounded-xl border bg-black/50 p-8 shadow-xl backdrop-blur-sm md:p-10"
               >
-                {/* Éléments graphiques de type diagramme technique */}
-                <div className="absolute -left-16 top-12 w-12 h-1 bg-white opacity-30"></div>
-                <div className="absolute -right-16 bottom-12 w-12 h-1 bg-white opacity-30"></div>
-                <div className="absolute left-4 -top-8 w-1 h-8 bg-white opacity-30"></div>
-                <div className="absolute right-4 -bottom-8 w-1 h-8 bg-white opacity-30"></div>
-                <div className="absolute left-10 top-10 w-3 h-3 border border-white rounded-full opacity-20"></div>
-                <div className="absolute right-10 bottom-20 w-3 h-3 border border-white rounded-full opacity-20"></div>
+                <motion.div
+                  className="bg-primary/10 absolute -right-20 -top-20 h-40 w-40 rounded-full blur-3xl"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.5, 0.3],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
 
-                <h2 className="mb-8 flex items-center text-2xl font-mono font-bold md:text-3xl">
+                <h2 className="text-primary mb-8 flex items-center text-2xl font-bold md:text-3xl">
                   <Heart size={28} className="mr-3 text-pink-400" />
-                  <span>{"// Lettre de Remerciements"}</span>
-                  <div className="ml-4 h-px flex-grow bg-white opacity-30"></div>
+                  <span>Lettre de Remerciements</span>
+                  <div className="from-primary/80 ml-4 h-px flex-grow bg-gradient-to-r to-transparent"></div>
                 </h2>
-                <div className="prose prose-lg relative z-10 max-w-none font-mono text-gray-300">
+                <div className="prose prose-lg relative z-10 max-w-none text-gray-300">
                   <p className="mb-5 leading-relaxed">
                     Je tiens à exprimer ma{" "}
-                    <span className="font-semibold text-white">
+                    <span className="text-primary font-semibold">
                       sincère gratitude
                     </span>{" "}
                     envers toute l&apos;équipe du DSIO du CHRSO pour son accueil
@@ -306,40 +289,37 @@ export default function Home() {
                   </p>
 
                   <motion.div
-                    className="mt-10 border-t border-white opacity-30 pt-8"
+                    className="border-primary/20 mt-10 border-t pt-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 1 }}
                   >
                     <div className="flex flex-wrap items-end justify-between gap-4">
                       <div className="flex items-center">
-                        <div className="mr-4 flex h-12 w-12 items-center justify-center border border-white">
-                          <MessageSquare size={22} className="text-white" />
+                        <div className="bg-primary/20 mr-4 flex h-12 w-12 items-center justify-center rounded-full">
+                          <MessageSquare size={22} className="text-primary" />
                         </div>
                         <div>
-                          <p className="mb-0 font-semibold font-mono text-white">
+                          <p className="mb-0 font-semibold text-white">
                             Derepper Lohan
                           </p>
-                          <p className="text-sm font-mono text-gray-400">
-                            {"[Stagiaire au DSIO]"}
+                          <p className="text-sm text-gray-400">
+                            Stagiaire au DSIO
                           </p>
                         </div>
                       </div>
                       <div className="flex items-center">
                         <Clock size={18} className="mr-2 text-gray-400" />
-                        <p className="text-sm font-mono text-gray-400">23/04/2025</p>
+                        <p className="text-sm text-gray-400">23/04/2025</p>
                       </div>
                     </div>
                   </motion.div>
                 </div>
-                <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
               </motion.section>
             </motion.div>
-            
-            {/* Footer redessiné - version simplifiée */}
           </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>
     </div>
   );
 }

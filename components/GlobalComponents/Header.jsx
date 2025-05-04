@@ -13,7 +13,6 @@ export default function Header() {
     { name: "Accueil", link: "/" },
     { name: "Présentation", link: "/Presentation" },
     { name: "Activites", link: "/Activites" },
-    { name: "Annexes", link: "/Annexes" },
     { name: "Conclusion", link: "/Conclusion" },
   ];
 
@@ -23,7 +22,7 @@ export default function Header() {
     >
       <div className="flex items-center gap-5">
         <Image src="/icones/studient.ico" width={40} height={40} />
-        <p className={`font-bold uppercase`}>portfolio de Lohan</p>
+        <p className={`font-mono uppercase`}>portfolio de Lohan</p>
       </div>
       <button
         onClick={() => setToggleSidebar(!toggleSidebar)}
@@ -72,7 +71,7 @@ export default function Header() {
               >
                 {linkList.map((link) => (
                   <li key={link.name} className="sm:w-full md:w-full">
-                    <Link href={link.link} className="text-white">
+                    <Link href={link.link} className="text-white font-mono">
                       {link.name}
                     </Link>
                   </li>
@@ -89,7 +88,7 @@ export default function Header() {
                         <Link
                           key={link.name}
                           href={link.link}
-                          className="mx-5 text-white duration-200 ease-out hover:-translate-y-2"
+                          className="mx-5 text-white font-mono duration-200 ease-out hover:-translate-y-2"
                         >
                           {link.name}
                         </Link>
@@ -103,7 +102,7 @@ export default function Header() {
                 <div className="z-20 flex w-auto min-w-[250px] justify-end sm:hidden">
                   <Link
                     href="/website"
-                    className="text-white duration-200 ease-out hover:-translate-y-2 sm:pr-4 md:sm:pr-4"
+                    className="text-white font-mono duration-200 ease-out hover:-translate-y-2 sm:pr-4 md:sm:pr-4"
                   >
                     Mon site web
                   </Link>

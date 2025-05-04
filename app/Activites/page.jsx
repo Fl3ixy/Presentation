@@ -7,18 +7,14 @@ import {
   ChevronDown,
   Code2,
   FileCode2,
-  GraduationCap,
-  LineChart,
-  Laptop,
-  Users,
-  Target,
   BookOpen,
-  Brain,
+  Target,
   CheckCircle2,
 } from "lucide-react";
 import ParticlesBackground from "@/components/GlobalComponents/ParticlesBackground";
 import HomePageSection from "@/components/HomePage/HomePageSection";
 import HomePageArticle from "@/components/HomePage/HomePageArticle";
+
 
 const styles = `
 @keyframes pulse {
@@ -37,7 +33,7 @@ const styles = `
 }
 
 .custom-shadow {
-  box-shadow: 0 4px 30px rgba(0, 100, 150, 0.5);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
 }
 
 .hover-translate {
@@ -46,16 +42,16 @@ const styles = `
 
 .hover-translate:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 40px rgba(0, 100, 150, 0.6);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3);
 }
 
 .glow-effect {
-  box-shadow: 0 0 15px rgba(0, 100, 150, 0.4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .glow-effect:hover {
-  box-shadow: 0 0 25px rgba(0, 100, 150, 0.6);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
 .gradient-overlay {
@@ -74,17 +70,13 @@ const styles = `
 const DATA = {
   hero: {
     title: "Rapport de Stage",
-    subtitle: "Activité réaliser durant ma période de stage au CHRSO",
+    subtitle: "Activité réaliser durant ma période de stage",
   },
   entreprise: {
-    nom: "Direction des Systèmes d'Information aux Organisations",
+    nom: "",
     description:
-      "Le service DSIO est responsable de la gestion de l'ensemble du parc informatique de l'hôpital. Au cours de mes semaines de stage au sein de ce service, j'ai acquis de nombreuses compétences et découvert différents aspects de son fonctionnement. À travers ce site web, je vais vous présenter une activité qui m'a particulièrement marqué.",
-    image: "/ImgRapport/CHRSO_Building.png",
-    stats: {
-      employes: "10 Employés",
-      ca: "1 accompagnateur d'activités",
-    },
+      "",
+    image: "",
   },
   projets: [
     {
@@ -185,39 +177,6 @@ const DATA = {
       level: 100,
     },
   ],
-  activitesQuotidiennes: {
-    planning: [
-      {
-        horaire: "09:00 - 17:00",
-        icon: <Calendar className="mx-auto h-6 w-6 text-white" />,
-        description: "Lundi",
-      },
-      {
-        horaire: "09:00 - 17:00",
-        icon: <Calendar className="mx-auto h-6 w-6 text-white" />,
-        description: "Mardi",
-      },
-      {
-        horaire: "09:00 - 17:00",
-        icon: <Calendar className="mx-auto h-6 w-6 text-white" />,
-        description: "Mercredi",
-      },
-      {
-        horaire: "09:00 - 17:00",
-        icon: <Calendar className="mx-auto h-6 w-6 text-white" />,
-        description: "Jeudi",
-      },
-      {
-        horaire: "09:00 - 17:00",
-        icon: <Calendar className="mx-auto h-6 w-6 text-white" />,
-        description: "Vendredi",
-      },
-    ],
-    statistiques: [
-      { valeur: "35", label: "Heures par semaine" },
-      { valeur: "7", label: "Heures par Jour" },
-    ],
-  },
   apprentissages: [
     {
       title: "Préparation",
@@ -262,7 +221,7 @@ const DATA = {
   ],
   conclusion: {
     paragraphe1:
-      "Les stages réalisés au CHRSO au sein du service informatique DSIO m'ont apporté une expérience très enrichissante, tant sur le plan technique que personnel. J'ai eu l'opportunité de participer à des projets variés, tels que des déploiements, la création de plans et le brassage dans deux baies, ainsi que d'autres tâches très intéressantes.",
+      "Les stages réalisés au sein du service informatique DSIO m'ont apporté une expérience très enrichissante, tant sur le plan technique que personnel. J'ai eu l'opportunité de participer à des projets variés, tels que des déploiements, la création de plans et le brassage dans deux baies, ainsi que d'autres tâches très intéressantes.",
     paragraphe2:
       "L'équipe du DSIO a été d'une grande bienveillance, toujours prête à apporter son aide et à expliquer les concepts lorsqu'il était nécessaire. Cela a été extrêmement valorisant, car j'ai pu apprendre beaucoup dans le domaine informatique, tout en développant des relations professionnelles de confiance avec les techniciens du service.",
     paragraphe3:
@@ -274,122 +233,81 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
 
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen text-white bg-black/70">
       <ParticlesBackground />
       <div className="gradient-overlay" />
       {/* Hero Section */}
-      <header className="relative flex h-screen items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${DATA.hero.backgroundImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "brightness(0.3) contrast(1.2)",
-          }}
-        />
-        <div className="relative z-10 px-4 text-center">
-          <h1 className="animate-pulse-slow mb-6 text-5xl font-bold text-sky-500 md:text-7xl">
+      <header className="relative flex h-screen items-center justify-center overflow-hidden py-24">
+        <div className="relative mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-white">
+          {/* Éléments graphiques techniques */}
+          <div className="absolute -left-16 top-12 w-12 h-1 bg-white opacity-30"></div>
+          <div className="absolute -right-16 bottom-12 w-12 h-1 bg-white opacity-30"></div>
+          <div className="absolute left-4 -top-8 w-1 h-8 bg-white opacity-30"></div>
+          <div className="absolute right-4 -bottom-8 w-1 h-8 bg-white opacity-30"></div>
+          <div className="absolute left-10 top-10 w-3 h-3 border border-white rounded-full opacity-20"></div>
+          <div className="absolute right-10 bottom-20 w-3 h-3 border border-white rounded-full opacity-20"></div>
+
+          <div className="mb-2 flex items-center gap-2 border border-white bg-black px-4 py-2">
+            <CheckCircle2 className="h-4 w-4 text-white" />
+            <span className="font-mono">{"//Rapport de Stage"}</span>
+          </div>
+          <h1 className="mb-8 text-center text-6xl font-bold leading-tight text-white font-mono md:text-7xl">
             {DATA.hero.title}
           </h1>
-          <p className="mb-8 text-xl text-white md:text-2xl">
-            {DATA.hero.subtitle}
+          <p className="mb-4 max-w-2xl text-center text-xl leading-relaxed text-gray-300 font-mono md:text-2xl">
+            {"< " + DATA.hero.subtitle + " />"}
           </p>
-          <ChevronDown className="mx-auto mt-12 h-8 w-8 animate-bounce text-sky-500" />
+          <ChevronDown className="mx-auto mt-12 h-8 w-8 text-white animate-bounce" />
         </div>
       </header>
 
       {/* Entreprise Section */}
-      <section className="bg-gradient-to-b from-black/0 via-black/50 to-black/80 px-4 py-20 md:px-8">
+      <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-8 flex items-center gap-4">
-            <Building2 className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Le DSIO</h2>
-          </div>
           <div className="grid items-center gap-12 md:grid-cols-2">
-            <Image
-              src={DATA.entreprise.image}
-              width={1500}
-              height={0}
-              alt="Entreprise"
-              className="glow-effect rounded-lg shadow-xl duration-200 hover:shadow-[0_10px_30px_-5px_rgba(66,166,232,0.6),0_10px_30px_-5px_rgba(66,166,232,0.4)]"
-              style={{
-                filter: "contrast(1.2) brightness(0.8)",
-                animation: "bounce 2.5s infinite ease-in-out",
-              }}
-            />
-            <style jsx>{`
-              @keyframes bounce {
-                0%,
-                100% {
-                  transform: translateY(0);
-                }
-                50% {
-                  transform: translateY(
-                    -15px
-                  ); /* Moins de mouvement vers le haut */
-                }
-              }
-            `}</style>
-
-            <div>
-              <h3 className="mb-4 text-2xl font-semibold text-sky-500">
-                {DATA.entreprise.nom}
-              </h3>
-              <p className="mb-6 text-white/80">
-                {DATA.entreprise.description}
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="custom-shadow hover-translate rounded-lg border border-sky-500/20 bg-black/50 p-4">
-                  <Users className="mb-2 h-6 w-6 text-sky-500" />
-                  <p className="font-semibold text-white">
-                    {DATA.entreprise.stats.employes}
-                  </p>
-                </div>
-                <div className="custom-shadow hover-translate rounded-lg border border-sky-500/20 bg-black/50 p-4">
-                  <LineChart className="mb-2 h-6 w-6 text-sky-500" />
-                  <p className="font-semibold text-white">
-                    {DATA.entreprise.stats.ca}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Projets Section */}
-      <section className="bg-black/80 px-4 py-20 md:px-8">
+      <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
-            <FileCode2 className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Activité Réalisé</h2>
+            <FileCode2 className="h-8 w-8 text-white" />
+            <h2 className="text-3xl font-bold font-mono">{"// Activité Réalisé"}</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {DATA.projets.map((projet, index) => (
               <div
                 key={index}
-                className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-8"
+                className="group relative overflow-hidden border border-white bg-black p-8 shadow-lg"
               >
+                <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                <div className="absolute bottom-2 right-2 w-2 h-2 bg-white rounded-full opacity-50"></div>
+                
                 <Image
                   src={projet.image}
                   alt={projet.title}
                   width={1500}
                   height={0}
-                  className="glow-effect mb-6 h-48 w-full rounded-lg object-cover"
-                  style={{ filter: "contrast(1.2) brightness(0.8)" }}
+                  className="mb-6 h-48 w-full object-cover border border-white"
                 />
-                <h3 className="mb-3 text-xl font-semibold text-sky-500">
-                  {projet.title}
+                <h3 className="mb-3 text-xl font-semibold text-white font-mono">
+                  {"[" + projet.title + "]"}
                 </h3>
-                <p className="mb-4 text-white/80">{projet.description}</p>
+                <p className="mb-4 leading-relaxed text-gray-300 font-mono">
+                  {projet.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {projet.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="hover-translate rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1 text-sm text-sky-500"
+                      className="flex items-center gap-2 border border-white bg-black px-4 py-2 backdrop-blur-sm duration-200 hover:scale-105 font-mono"
                     >
-                      {tech}
+                      <span className="text-white">{"[" + tech + "]"}</span>
                     </span>
                   ))}
                 </div>
@@ -400,28 +318,33 @@ export default function App() {
       </section>
 
       {/* Technologies Section */}
-      <section className="bg-black/80 px-4 py-20 md:px-8">
+      <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
-            <Code2 className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Technologies Utilisées</h2>
+            <Code2 className="h-8 w-8 text-white" />
+            <h2 className="text-3xl font-bold font-mono">{"// Technologies Utilisées"}</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {DATA.technologies.map((tech, index) => (
               <div
                 key={index}
-                className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-6"
+                className="group relative overflow-hidden border border-white bg-black p-6 shadow-lg"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-sky-500/10">
+                <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                
+                <div className="mb-4 flex h-12 w-12 items-center justify-center border border-white bg-black">
                   {tech.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-sky-500">
-                  {tech.name}
+                <h3 className="mb-3 text-xl font-semibold text-white font-mono">
+                  {"[" + tech.name + "]"}
                 </h3>
-                <p className="text-white/80">{tech.description}</p>
-                <div className="mt-4 h-2 rounded-full bg-black/50">
+                <p className="text-gray-300 font-mono">{tech.description}</p>
+                <div className="mt-4 h-2 bg-black border border-white">
                   <div
-                    className="h-2 rounded-full bg-sky-500"
+                    className="h-1.5 bg-white"
                     style={{ width: `${tech.level}%` }}
                   />
                 </div>
@@ -430,40 +353,51 @@ export default function App() {
           </div>
         </div>
       </section>
+      
       {/* Activités 2-3 */}
-      <section className="bg-black/80 px-4 py-20 md:px-8">
+      <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
-            <Calendar className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Déroulement du Stage</h2>
+            <Calendar className="h-8 w-8 text-white" />
+            <h2 className="text-3xl font-bold font-mono">{"// Déroulement du Stage"}</h2>
           </div>
           <div className="relative">
-            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-sky-500/20" />
+            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-white opacity-20" />
             <div className="relative mb-12 flex">
               <div className="flex-1">
-                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[0].title}
+                <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                  
+                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                    {"[" + DATA.timeline[0].title + "]"}
                   </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[0].date}</p>
-                  <p className="text-white/80">
+                  <p className="mb-2 text-white font-mono">{DATA.timeline[0].date}</p>
+                  <p className="text-gray-300 font-mono">
                     {DATA.timeline[0].description}
                   </p>
                 </div>
               </div>
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
               <div className="flex-1" />
             </div>
             <div className="relative mb-12 flex">
               <div className="flex-1" />
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
               <div className="flex-1">
-                <div className="custom-shadow hover-translate ml-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[1].title}
+                <div className="ml-8 border border-white bg-black p-6 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                  
+                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                    {"[" + DATA.timeline[1].title + "]"}
                   </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[1].date}</p>
-                  <p className="text-white/80">
+                  <p className="mb-2 text-white font-mono">{DATA.timeline[1].date}</p>
+                  <p className="text-gray-300 font-mono">
                     {DATA.timeline[1].description}
                   </p>
                 </div>
@@ -471,24 +405,30 @@ export default function App() {
             </div>
             <div className="relative mb-12 flex">
               <div className="flex-1">
-                <div className="custom-shadow hover-translate mr-8 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {DATA.timeline[2].title}
+                <div className="mr-8 border border-white bg-black p-6 group relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+                  <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+                  <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+                  <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+                  
+                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                    {"[" + DATA.timeline[2].title + "]"}
                   </h3>
-                  <p className="mb-2 text-white">{DATA.timeline[2].date}</p>
-                  <p className="text-white/80">
+                  <p className="mb-2 text-white font-mono">{DATA.timeline[2].date}</p>
+                  <p className="text-gray-300 font-mono">
                     {DATA.timeline[2].description}
                   </p>
                 </div>
               </div>
-              <div className="glow-effect absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full bg-sky-500" />
+              <div className="absolute left-1/2 mt-6 h-4 w-4 -translate-x-1/2 transform rounded-full border border-white bg-black" />
               <div className="flex-1" />
             </div>
           </div>
         </div>
       </section>
+      
       {/* PARAGRAPHE 3 */}
-      <HomePageSection sectionStyles={"bg-black/80"}>
+      <HomePageSection sectionStyles={"bg-black/70"}>
         <HomePageArticle
           type="info"
           label="Mon avis sur le déploiment"
@@ -503,39 +443,37 @@ export default function App() {
               label: "Accueil",
               href: "/",
               className:
-                "hover:-rotate-3 hover:shadow-[-4px_0_8px_5px_rgba(0,114,255,0.8)]",
+                "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
             },
             {
               label: "Conclusion",
               href: "/Conclusion",
               className:
-                "hover:-rotate-3 hover:shadow-[4px_0px_8px_5px_rgba(0,114,255,0.8)]",
+                "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
             },
           ]}
         />
       </HomePageSection>
 
       {/* Apprentissages Section */}
-      <section className="bg-black/80 px-4 py-20 md:px-8">
+      <section className="px-4 py-20 md:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 flex items-center gap-4">
-            <BookOpen className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Etapes Clés</h2>
+            <BookOpen className="h-8 w-8 text-white" />
+            <h2 className="text-3xl font-bold font-mono">{"// Etapes Clés"}</h2>
           </div>
           <div className="grid gap-12 md:grid-cols-2">
             {DATA.apprentissages.map((item, index) => (
               <div
                 key={index}
-                className="hover-translate flex items-start gap-4 rounded-xl p-4"
+                className="group flex items-start gap-4 border border-white bg-black p-6 transition-all duration-300"
               >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-sky-500/10">
-                  <CheckCircle2 className="h-6 w-6 text-sky-500" />
-                </div>
+                <CheckCircle2 className="mt-1 h-6 w-6 transition-transform duration-300 group-hover:scale-110 text-white" />
                 <div>
-                  <h3 className="mb-2 text-xl font-semibold text-sky-500">
-                    {item.title}
+                  <h3 className="mb-2 text-xl font-semibold text-white font-mono">
+                    {"[" + item.title + "]"}
                   </h3>
-                  <p className="text-white/80">{item.description}</p>
+                  <p className="text-gray-300 font-mono">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -543,68 +481,27 @@ export default function App() {
         </div>
       </section>
 
-      {/* Activités Quotidiennes Section - NOUVELLE SECTION */}
-      <section className="bg-black/80 px-4 py-20 md:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 flex items-center gap-4">
-            <Laptop className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Planning de stage</h2>
-          </div>
-          {/* Planning type */}
-          <div className="custom-shadow mb-12 rounded-xl border border-sky-500/20 bg-black/50 p-6">
-            <h3 className="mb-6 text-center text-2xl font-semibold text-sky-500">
-              Planning Type d&apos;une Journée
-            </h3>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-              {DATA.activitesQuotidiennes.planning.map((plage, index) => (
-                <div
-                  key={index}
-                  className="hover-translate rounded-lg border border-sky-500/20 bg-sky-500/10 p-4"
-                >
-                  <div className="mb-2 text-center">
-                    <span className="text-lg font-semibold text-sky-500">
-                      {plage.horaire}
-                    </span>
-                  </div>
-                  <div className="mb-2 text-center">{plage.icon}</div>
-                  <p className="text-center text-white/80">
-                    {plage.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Statistiques */}
-          <div className="grid gap-6 md:grid-cols-4">
-            {DATA.activitesQuotidiennes.statistiques.map((stat, index) => (
-              <div
-                key={index}
-                className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-6 text-center"
-              >
-                <div className="mb-2 text-3xl font-bold text-sky-500">
-                  {stat.valeur}
-                </div>
-                <p className="text-white/80">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-b from-black/80 via-black/50 to-black/0 px-4 py-20 md:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-8 flex items-center gap-4">
-            <Target className="h-8 w-8 text-sky-500" />
-            <h2 className="text-3xl font-bold">Conclusion</h2>
-          </div>
-          <div className="custom-shadow hover-translate rounded-xl border border-sky-500/20 bg-black/50 p-8">
-            <p className="mb-6 text-white/80">{DATA.conclusion.paragraphe1}</p>
-            <p className="mb-6 text-white/80">{DATA.conclusion.paragraphe2}</p>
-            <p className="text-white/80">{DATA.conclusion.paragraphe3}</p>
-          </div>
-        </div>
-      </section>
+{/* Continuing from the previous code */}
+<section className="px-4 py-20 md:px-8">
+  <div className="mx-auto max-w-6xl">
+    <div className="mb-8 flex items-center gap-4">
+      <Target className="h-8 w-8 text-white" />
+      <h2 className="text-3xl font-bold font-mono">{"// Conclusion"}</h2>
     </div>
-  );
+    <div className="relative border border-white bg-black p-8">
+      <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-white opacity-40"></div>
+      <div className="absolute top-0 right-0 w-6 h-6 border-t border-r border-white opacity-40"></div>
+      <div className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-white opacity-40"></div>
+      <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-white opacity-40"></div>
+
+      <div className="space-y-6 font-mono">
+        <p className="text-gray-300">{DATA.conclusion.paragraphe1}</p>
+        <p className="text-gray-300">{DATA.conclusion.paragraphe2}</p>
+        <p className="text-gray-300">{DATA.conclusion.paragraphe3}</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+);
 }
