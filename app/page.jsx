@@ -193,7 +193,7 @@ export default function Home() {
               },
               {
                 title: "Annexes",
-                icon: <Building className="mb-4 h-8 w-8 text-white" />,
+                icon: <Monitor className="mb-4 h-8 w-8 text-white" />,
                 description:
                   "Présentation du site web réalisé en NextJS et TailwindCSS. Objectif : créer un site web moderne, rapide et responsive. Projet développé dans le cadre de ma formation en bac pro SN pour mettre en pratique mes compétences en développement web pour l'oral.",
                 link: "/Annexes",
@@ -236,13 +236,6 @@ export default function Home() {
                 description:
                   "Bilan de mon stage avec points positifs, axes d'amélioration et lettre de remerciement envers l'équipe du service informatique.",
                 link: "/Conclusion",
-              },
-              {
-                title: "Annexes",
-                icon: <Monitor className="mb-4 h-8 w-8 text-white" />,
-                description:
-                  "Présentation technique de ce portfolio : conception, développement et choix des technologies pour documenter mon expérience.",
-                link: "/Annexes",
               },
             ].map((section, index) => (
               <Link href={section.link} key={index}>

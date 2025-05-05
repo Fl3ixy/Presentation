@@ -221,11 +221,11 @@ const DATA = {
   ],
   conclusion: {
     paragraphe1:
-      "Les stages réalisés au sein du service informatique DSIO m'ont apporté une expérience très enrichissante, tant sur le plan technique que personnel. J'ai eu l'opportunité de participer à des projets variés, tels que des déploiements, la création de plans et le brassage dans deux baies, ainsi que d'autres tâches très intéressantes.",
+      "Le stage effectué au sein du service informatique DSIO m'a permis d'acquérir une expérience très enrichissante, aussi bien sur le plan technique que personnel. J'ai notamment participé au déploiement de bornes Wi-Fi dans l'hôpital, une mission complète allant de la configuration à l'intégration des équipements sur le réseau, en passant par la création de fichiers .csv et l'installation physique.",
     paragraphe2:
-      "L'équipe du DSIO a été d'une grande bienveillance, toujours prête à apporter son aide et à expliquer les concepts lorsqu'il était nécessaire. Cela a été extrêmement valorisant, car j'ai pu apprendre beaucoup dans le domaine informatique, tout en développant des relations professionnelles de confiance avec les techniciens du service.",
+      "L'équipe du DSIO a su faire preuve de pédagogie et de bienveillance, m'accompagnant à chaque étape du projet et prenant le temps de m'expliquer les différents outils et concepts liés au réseau. Cela m'a permis de renforcer mes compétences tout en évoluant dans un environnement professionnel motivant.",
     paragraphe3:
-      "Je tiens à remercier chaleureusement toute l'équipe du DSIO pour leur accueil, leur patience et leur soutien tout au long de ce stage. Nous restons actuellement en contact, ce qui me permet de continuer à bénéficier de leurs conseils, notamment pour la préparation d'entretiens et d'autres aspects liés à ma carrière professionnelle.",
+      "Je remercie chaleureusement l'ensemble de l'équipe pour leur accueil, leur patience et leur soutien. Nous restons en contact, ce qui me permet de continuer à bénéficier de leurs conseils pour mes projets futurs et ma progression professionnelle.",
   },
 };
 
@@ -353,35 +353,6 @@ export default function App() {
           </div>
         </div>
       </section>
-      
-      
-      {/* Avis Déploiment */}
-      <HomePageSection sectionStyles={"bg-black/70"}>
-        <HomePageArticle
-          type="info"
-          label="Mon avis sur le déploiment"
-          description="Lors du déploiement de toutes les bornes ainsi que des étapes cruciales qui ont suivi, 
-          'ai adoré réaliser cette mission en me sentant utile à sa réussite. Cette expérience m'a permis d'apprendre 
-          énormément de choses, comme le fonctionnement d'un contrôleur Wi-Fi, l'utilisation d'un fichier CSV pour 
-          l'enrôlement, etc.Tout ce que j'ai vécu au cours de cette mission me sera très utile, et je me considère 
-          chanceux d'avoir eu l'opportunité de travailler dans un hôpital, entouré d'une équipe bienveillante. 
-          Être bien accompagné m'a permis de poser toutes mes questions et d'apprendre encore plus."
-          linkinfos={[
-            {
-              label: "Accueil",
-              href: "/",
-              className:
-                "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
-              },
-            {
-              label: "Conclusion",
-              href: "/Conclusion",
-              className:
-                "border-2 border-white bg-black text-lg text-white h-14 w-44 flex items-center justify-center duration-200 hover:-translate-y-2 hover:scale-110 active:scale-100 active:duration-75 font-mono",
-              },
-          ]}
-        />
-      </HomePageSection>
 
       {/* Etapes Clés */}
       <section className="px-4 py-20 md:px-8">
