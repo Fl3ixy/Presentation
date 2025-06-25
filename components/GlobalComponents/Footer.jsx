@@ -23,12 +23,17 @@ export default function Footer() {
           </Link>
           <Link href={"Conclusion"}>
             <h2 className="text-center text-base font-mono sm:hidden transition-colors hover:text-gray-400">
-              {"[Conclusion]"}
+              {"[Conclusion stage]"}
             </h2>
           </Link>
           <Link href={"/Annexes"}>
             <h2 className="text-center text-base font-mono transition-colors hover:text-gray-400">
               {"[Annexes]"}
+            </h2>
+          </Link>
+                   <Link href={"ConclusionSite"}>
+            <h2 className="text-center text-base font-mono sm:hidden transition-colors hover:text-gray-400">
+              {"[Conclusion du projet]"}
             </h2>
           </Link>
         </div>
