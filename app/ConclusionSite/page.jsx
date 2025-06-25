@@ -296,7 +296,7 @@ export default function Home() {
                     d&apos;enseignement professionnel, M. POLLET et M. MERESSE,
                     ainsi qu&apos;aux professeurs d&apos;enseignement général,
                     Mme DECARSIN, M. COLLIER, pour leur bienveillance et leur
-                    patience durant ces trois années. Leurs conseils avisés et
+                    patience durant ces trois années. Leurs conseils et
                     l&apos;enseignement qu&apos;ils m&apos;ont apporté
                     m&apos;ont énormément enrichi. Leur soutien m&apos;a permis
                     de progresser et de m&apos;épanouir pleinement dans les

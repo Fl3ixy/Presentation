@@ -32,7 +32,7 @@ export default function Footer() {
             </h2>
           </Link>
                    <Link href={"ConclusionSite"}>
-            <h2 className="text-center text-base font-mono sm:hidden transition-colors hover:text-gray-400">
+            <h2 className="text-center text-base font-mono transition-colors hover:text-gray-400">
               {"[Conclusion du projet]"}
             </h2>
           </Link>
